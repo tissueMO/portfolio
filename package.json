@@ -1,0 +1,7 @@
+{
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "bootstrap": "^4.4.1",
+    "startbootstrap-agency": "^5.2.2"
+  }
+}
