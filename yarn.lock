@@ -1955,6 +1955,11 @@ core-js-compat@^3.6.2:
     browserslist "^4.8.3"
     semver "7.0.0"
 
+core-js@^3.6.4:
+  version "3.6.4"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.6.4.tgz#440a83536b458114b9cb2ac1580ba377dc470647"
+  integrity sha512-4paDGScNgZP2IXXilaffL9X7968RuvwlkK3xWtZRVqgd8SYNiVKRJvkFd1aqqEuPfN7E68ZHEp9hDj6lHj4Hyw==
+
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
@@ -2491,6 +2496,19 @@ ejs-html-loader@^4.0.1:
   integrity sha512-aBrpuqLQaDy76Yo/nT9+OOx4xJLOrQSFjTwpb/gKR/q1VQKMq22M36mYGTy4qeCGG9ofFWsXmyDoP/cqMWX4CA==
   dependencies:
     loader-utils "^1.2.3"
+
+ejs-render-loader@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ejs-render-loader/-/ejs-render-loader-1.0.0.tgz#664de5541023a1e21ab8952f1558adba02be9f78"
+  integrity sha1-Zk3lVBAjoeIauJUvFVitugK+n3g=
+  dependencies:
+    ejs "^2.0.0"
+    loader-utils "^0.2.7"
+
+ejs@^2.0.0:
+  version "2.7.4"
+  resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.7.4.tgz#48661287573dcc53e366c7a1ae52c3a120eec9ba"
+  integrity sha512-7vmuyh5+kuUyJKePhQfRQBhXV5Ce+RnaeeQArKu1EAMpL3WbgMt5WG6uQZpEVvYSSsxMXRKOewtDk9RaTKXRlA==
 
 ejs@^3.0.1:
   version "3.0.1"
@@ -4458,7 +4476,7 @@ loader-utils@1.2.3:
     emojis-list "^2.0.0"
     json5 "^1.0.1"
 
-loader-utils@^0.2.16:
+loader-utils@^0.2.16, loader-utils@^0.2.7:
   version "0.2.17"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-0.2.17.tgz#f86e6374d43205a6e6c60e9196f17c0299bfb348"
   integrity sha1-+G5jdNQyBabmxg6RlvF8Apm/s0g=

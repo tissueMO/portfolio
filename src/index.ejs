@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('templates/_head'); %>
+</head>
+
+<body id="page-top">
+  <%- include('templates/_header'); %>
+
+  <main>
+    <!-- Works -->
+    <section class="page-section" id="works">
+      <div class="container-fluid">
+        <%- include('templates/sections/_works'); %>
+      </div>
+    </section><!-- Works -->
+
+    <!-- Portfolio -->
+    <section class="bg-light page-section" id="portfolio">
+      <div class="container-fluid">
+        <%- include('templates/sections/_portfolio'); %>
+      </div>
+    </section><!-- Portfolio -->
+
+    <!-- About -->
+    <section class="page-section" id="about">
+      <%- include('templates/sections/_about'); %>
+    </section><!-- About -->
+
+    <!-- Skills -->
+    <section class="bg-light page-section" id="skills">
+      <div class="container">
+        <%- include('templates/sections/_skills'); %>
+      </div>
+    </section><!-- Skills -->
+
+    <!-- Contect -->
+    <section class="page-section" id="contact">
+      <div class="container">
+        <%- include('templates/sections/_contact'); %>
+      </div>
+    </section><!-- Contect -->
+  </main>
+
+  <!-- Portfolio Modals -->
+  <!-- <div> -->
+    <%- include('templates/sections/_portfolio-modals'); %>
+  <!-- Portfolio Modals -->
+
+  <%- include('templates/_footer'); %>
+</body>
+
+</html>

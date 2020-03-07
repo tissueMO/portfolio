@@ -1,0 +1,51 @@
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+
+// ##### Bootstrap Agency #####
+// Core variables and mixins
+@import "../../node_modules/startbootstrap-agency/scss/base/variables.scss";
+@import "./base/mixins";
+
+// Global CSS
+@import "../../node_modules/startbootstrap-agency/scss/base/page.scss";
+
+// Components
+@import "../../node_modules/startbootstrap-agency/scss/components/buttons.scss";
+@import "./components/navbar";
+
+// Layout
+@import "../../node_modules/startbootstrap-agency/scss/layout/services.scss";
+@import "../../node_modules/startbootstrap-agency/scss/layout/portfolio.scss";
+@import "../../node_modules/startbootstrap-agency/scss/layout/timeline.scss";
+@import "../../node_modules/startbootstrap-agency/scss/layout/team.scss";
+@import "./layout/masthead";
+@import "./layout/footer";
+
+
+section.page-section {
+  .container.page-section {
+    h3.section-subheading {
+      .h3 {
+        position: relative;
+
+        &:before {
+          content: '';
+          position: absolute;
+          display: inline-block;
+          transform: translateX(-50%);
+          left: 50%;
+          bottom: -16px;
+          width: 4rem;
+          height: 2px;
+          background-color: #000;
+        }
+      }
+    }
+  }
+}
+
+small {
+  .material-icons {
+    font-size: 18px;
+  }
+}

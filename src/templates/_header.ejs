@@ -1,0 +1,53 @@
+<!-- ナビゲーションバー -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="main-nav">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">@tissueMO</a>
+
+    <!-- モバイル版レイアウトのみ -->
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <i class="material-icons">menu</i>
+    </button>
+
+    <!-- スクロールスパイする見出し -->
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav text-uppercase ml-auto">
+        <li class="nav-item">
+          <% const topNav = "#works"; %>
+          <a class="nav-link js-scroll-trigger" href="<%= topNav %>">Works</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item js-scroll-trigger" href="#career">Career</a>
+            <a class="dropdown-item js-scroll-trigger" href="#beliefs">Beliefs</a>
+            <a class="dropdown-item js-scroll-trigger" href="#values">Values</a>
+            <a class="dropdown-item js-scroll-trigger" href="#strength">Strength</a>
+            <a class="dropdown-item js-scroll-trigger" href="#weakness">Weakness</a>
+            <a class="dropdown-item" js-scroll-trigger href="#wannatry">Wanna Try</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- 共通ヘッダー -->
+<header class="masthead">
+  <div class="container">
+    <div class="intro-text">
+      <div class="intro-lead-in">お客様のビジネスを導く</div>
+      <div class="intro-heading text-uppercase">フルスタックエンジニア</div>
+    </div>
+  </div>
+</header>
