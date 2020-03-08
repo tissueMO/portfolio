@@ -1,4 +1,146 @@
 {
-  "skills": [
-  ]
+  "skills": {
+    "charts": [
+      {
+        "title": "システム開発工程別",
+        "type": "radar",
+        "data": {
+          "labels": [
+            "要件定義", "外部設計", "詳細設計", "アーキテクチャー設計",
+            "画面デザイン", "製造", "試験", "保守/運用"
+          ],
+          "datasets": [
+            {
+              "data": [
+                40, 70, 80, 75,
+                65, 90, 60, 30
+              ],
+              "backgroundColor": "rgba(255, 127, 127, 0.3)",
+              "borderColor": "rgb(255, 80, 80)",
+              "borderWidth": 3
+            }
+          ]
+        }
+      },
+      {
+        "title": "言語別",
+        "type": "radar",
+        "data": {
+          "labels": [
+            "C#", "C++", "VB.NET", "Java",
+            "Python", "Node.js", "HTML5", "CSS3",
+            "R", "bash", "PowerShell"
+          ],
+          "datasets": [
+            {
+              "data": [
+                90, 60, 60, 80,
+                80, 70, 70, 50,
+                50, 40, 30
+              ],
+              "backgroundColor": "rgba(127, 255, 127, 0.3)",
+              "borderColor": "rgb(80, 255, 80)",
+              "borderWidth": 3
+            }
+          ]
+        }
+      },
+      {
+        "title": "プラットフォーム別",
+        "type": "radar",
+        "data": {
+          "labels": [
+            "Windows アプリ", "Mac アプリ", "iOS アプリ", "Android アプリ",
+            "フロントエンド", "サーバーサイド"
+          ],
+          "datasets": [
+            {
+              "data": [
+                70, 0, 0, 30,
+                70, 80
+              ],
+              "backgroundColor": "rgba(127, 127, 255, 0.3)",
+              "borderColor": "rgb(80, 80, 255)",
+              "borderWidth": 3
+            }
+          ]
+        }
+      }
+    ],
+    "lists": [
+      {
+        "title": "保有資格",
+        "values": [
+          "ITパスポート"
+        ]
+      },
+      {
+        "title": "習得言語",
+        "values": [
+          "C#",
+          "Visual Basic .NET",
+          "Java",
+          "Python",
+          "Node.js",
+          "HTML5",
+          "CSS3",
+          "C++",
+          "R"
+        ]
+      },
+      {
+        "title": "フレームワーク・ライブラリ",
+        "values": [
+          "C++ | Win32",
+          "C# | WinForms",
+          "Java | Spring Boot, Thymeleaf, Struts2, FreeMarker",
+          "Python | Flask, Django, Jinja2, TensorFlow, Keras, NumPy, Pandas",
+          "Node.js | Webpack, Gulp, Babel, Scss, Bootstrap"
+        ]
+      },
+      {
+        "title": "開発環境",
+        "values": [
+          "C++ | Visual Studio",
+          "C# | Visual Studio, Unity",
+          "Java | Eclipse",
+          "Python | VSCode",
+          "Node.js | VSCode",
+          "R | RStudio"
+        ]
+      },
+      {
+        "title": "DBMS",
+        "values": [
+          "SQLite",
+          "MySQL",
+          "Oracle Database"
+        ]
+      },
+      {
+        "title": "パブリッククラウド",
+        "values": [
+          "GCP | Compute Engine, App Engine, Functions, Run, Stackdriver, Vision, Storage, Container Registry",
+          "AWS | EC2, S3, RDS, Lightsail, ECR, ECS, SageMaker"
+        ]
+      },
+      {
+        "title": "プラットフォーム",
+        "values": [
+          "Linux | CentOS, Ubuntu",
+          "Windows 10",
+          "Android"
+        ]
+      },
+      {
+        "title": "周辺ツール",
+        "values": [
+          "Git",
+          "Subversion",
+          "Docker",
+          "VMware ESXi"
+        ]
+      }
+    ]
+  }
 }

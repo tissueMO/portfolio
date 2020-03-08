@@ -1,6 +1,9 @@
 // Font Mixins
 @mixin serif-font {
-  font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, Roboto, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+  font-family: 'Noto Serif JP', -apple-system, BlinkMacSystemFont, Roboto, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+}
+@mixin title-font {
+  font-family: 'Noto Serif JP', -apple-system, BlinkMacSystemFont, Roboto, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
 }
 @mixin script-font {
   font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, Roboto, 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
@@ -9,5 +12,5 @@
   font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, Roboto, 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
 }
 @mixin heading-font {
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, Roboto, 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, Roboto, 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
 }

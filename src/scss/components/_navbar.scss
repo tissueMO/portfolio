@@ -13,7 +13,8 @@
   }
   .navbar-brand {
     color: $primary;
-    @include script-font;
+    letter-spacing: 1px;
+    @include title-font;
 
     &.active, &:active, &:focus, &:hover {
       color: darken($primary, 20%);
@@ -64,7 +65,7 @@
     &.navbar-shrink {
       padding-top: 0;
       padding-bottom: 0;
-      background-color: $gray-900;
+      background-color: #111;
 
       .navbar-brand {
         font-size: 1.25em;
@@ -92,6 +93,9 @@
 
     .dropdown-item {
       color: #fff;
+      font-size: 90%;
+      padding-top: 0.4rem;
+      padding-bottom: 0.4rem;
 
       &.active, &:hover {
         color: $primary;
@@ -100,12 +104,12 @@
     }
 
     &.navbar-shrink {
-      background-color: #212529;
+      background-color: #111;;
       margin-top: 0;
 
       .dropdown-item {
         &.active, &:hover {
-          background-color: #212529;
+          background-color: #111;;
         }
       }
     }

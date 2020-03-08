@@ -1,0 +1,19 @@
+@import "../../../node_modules/startbootstrap-agency/scss/layout/portfolio";
+
+#portfolio {
+  .portfolio-item {
+    .portfolio-caption {
+      p {
+        font-style: normal;
+      }
+    }
+  }
+}
+
+.modal {
+  .modal-content {
+    .item-intro {
+      @include body-font;
+    }
+  }
+}

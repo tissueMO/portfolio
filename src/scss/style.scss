@@ -1,5 +1,7 @@
 @import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
+// ##### Swiper #####
+@import "../../node_modules/swiper/css/swiper.min.css";
 
 // ##### Bootstrap Agency #####
 // Core variables and mixins
@@ -14,19 +16,31 @@
 @import "./components/navbar";
 
 // Layout
-@import "../../node_modules/startbootstrap-agency/scss/layout/services.scss";
-@import "../../node_modules/startbootstrap-agency/scss/layout/portfolio.scss";
 @import "../../node_modules/startbootstrap-agency/scss/layout/timeline.scss";
 @import "../../node_modules/startbootstrap-agency/scss/layout/team.scss";
+@import "./layout/portfolio";
 @import "./layout/masthead";
+@import "./layout/services";
+@import "./layout/skills";
 @import "./layout/footer";
 
 
+.page-section {
+  h3 {
+    &.section-subheading {
+      font-style: normal;
+      @include body-font;
+    }
+  }
+}
+
 section.page-section {
   .container.page-section {
-    h3.section-subheading {
+    h3 {
       .h3 {
         position: relative;
+        display: inline-block;
+        margin-bottom: 4rem;
 
         &:before {
           content: '';
@@ -47,5 +61,40 @@ section.page-section {
 small {
   .material-icons {
     font-size: 18px;
+  }
+}
+
+.dropdown-menu {
+  &.show {
+    transition: all 0.5s ease;
+  }
+}
+
+.swiper-button-next, .swiper-button-prev {
+  &:after {
+    color: #ccc;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .last td:last-child {
+    width: 100%;
+  }
+  .table {
+    th {
+      border-bottom: none;
+      display: block;
+      width: 100%;
+    }
+    td {
+      border-bottom: none;
+      text-align: left;
+      display: block;
+      width: 100%;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-bottom: 1rem;
+      padding-top: 0;
+    }
   }
 }

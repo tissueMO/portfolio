@@ -8,7 +8,8 @@ for (const item of contents.portfolio) {
 %>
 
 <!-- Modal -->
-<div class="modal fade" id="portfolioModal<%- idCounter %>" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade js-portfolio-modal" id="portfolioModal<%- idCounter %>" tabindex="-1" role="dialog"
+  aria-hidden="true">
   <div class="modal-dialog modal-xl text-center" role="document">
     <div class="modal-content">
       <div class="modal-header border-bottom-0 pt-4 pr-4 pb-0">
@@ -22,37 +23,59 @@ for (const item of contents.portfolio) {
         <h2 class="mb-3"><%= item.name %></h2>
         <p class="item-intro text-muted mb-5"><%= item.lead %></p>
 
-        <%
-          if (typeof item.images === 'string') {
-            // 単一の画像
-            if (item.images === '') {
-              // 画像未設定
-        %>
-        <img class="img-fluid d-block mx-auto" src="/img/portfolio/no-image.png" alt="<%= item.name %>">
-        <%
-            } else {
-        %>
-        <img class="img-fluid d-block mx-auto" src="/img/portfolio/<%- item.images %>" alt="<%= item.name %>">
-        <%
-            }
-          } else if (Array.isArray(item.images)) {
-            // 複数の画像
-            for (const image of item.images) {
-              if (typeof image === 'string') {
-                // 画像のファイル名
-        %>
-        <img class="img-fluid d-block mx-auto" src="/img/portfolio/<%- image %>" alt="<%= item.name %>">
-        <%
-              } else {
-                // 画像ファイル名と補足文のセット
-        %>
-        <img class="img-fluid d-block mx-auto" src="/img/portfolio/<%- image['file'] %>"
-          alt="<%- image['description'] %>">
-        <%
+        <div class="swiper-container swiper-container-portfolio swiper-container-portfolio-<%- idCounter %> my-5">
+          <div class="swiper-wrapper">
+            <%
+              let isSingle = true;
+
+              if (typeof item.images === 'string') {
+                // 単一の画像
+                if (item.images === '') {
+                  // 画像未設定
+            %>
+            <div class="swiper-slide">
+              <img class="img-fluid d-block mx-auto" src="/img/portfolio/no-image.png" alt="<%= item.name %>">
+            </div>
+            <%
+                } else {
+            %>
+            <div class="swiper-slide">
+              <img class="img-fluid d-block mx-auto" src="/img/portfolio/<%- item.images %>" alt="<%= item.name %>">
+            </div>
+            <%
+                }
+              } else if (Array.isArray(item.images)) {
+                // 複数の画像
+                if (item.images.length > 1) {
+                  isSingle = false;
+                }
+                for (const image of item.images) {
+                  if (typeof image === 'string') {
+                    // 画像のファイル名
+            %>
+            <div class="swiper-slide">
+              <img class="img-fluid d-block mx-auto" src="/img/portfolio/<%- image %>" alt="<%= item.name %>">
+            </div>
+            <%
+                  } else {
+                    // 画像ファイル名と補足文のセット
+            %>
+            <div class="swiper-slide">
+              <img class="img-fluid d-block mx-auto" src="/img/portfolio/<%- image['file'] %>"
+                alt="<%- image['description'] %>">
+            </div>
+            <%
+                  }
+                }
               }
-            }
-          }
-        %>
+            %>
+          </div>
+          <% if (!isSingle) { %>
+          <div class="swiper-pagination swiper-pagination-portfolio-<%- idCounter %>"></div>
+          <div class="swiper-button-prev swiper-button-prev-portfolio-<%- idCounter %>"></div>
+          <div class="swiper-button-next swiper-button-next-portfolio-<%- idCounter %>"></div>
+          <% } %>
+        </div>
 
         <p class="my-5"><%- item.description %></p>
 

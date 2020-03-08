@@ -1,7 +1,8 @@
 <!-- ナビゲーションバー -->
+<% const personName = '@tissueMO'; %>
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="main-nav">
   <div class="container">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">@tissueMO</a>
+    <a class="navbar-brand js-scroll-trigger" href="#page-top"><%- personName %></a>
 
     <!-- モバイル版レイアウトのみ -->
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -45,9 +46,18 @@
 <!-- 共通ヘッダー -->
 <header class="masthead">
   <div class="container">
+    <div class="d-flex flex-nowrap justify-content-left">
+      <div class="title-text d-flex align-items-center">
+        <i class="fas fa-glasses"></i>
+      </div>
+      <div class="title-text">
+        <div class="title-lead-in">Fullstack Engineer</div>
+        <div class="title-heading"><%- personName %></div>
+      </div>
+    </div>
     <div class="intro-text">
-      <div class="intro-lead-in">お客様のビジネスを導く</div>
-      <div class="intro-heading text-uppercase">フルスタックエンジニア</div>
+      <h4 class="intro-heading">お客様のビジネスを成功へ導くフルスタックエンジニア</h4>
+      <p class="intro-lead-in">お客様のビジネスを成功へ導くフルスタックエンジニアですお客様のビジネスを成功へ導くフルスタックエンジニアですお客様のビジネスを成功へ導くフルスタックエンジニアですお客様のビジネスを成功へ導くフルスタックエンジニアですお客様のビジネスを成功へ導くフルスタックエンジニアです</p>
     </div>
   </div>
 </header>

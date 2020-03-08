@@ -1,18 +1,38 @@
 <div class="row">
   <div class="col-lg-12 text-center">
     <h2 class="section-heading text-uppercase">Skills</h2>
-    <h3 class="section-subheading text-muted">
-      <script>document.write(`${new Date().getFullYear()}年${new Date().getMonth()}月`);</script>現在 私が持つスキルセットです。
-    </h3>
   </div>
 </div>
+
+<div class="row mb-4">
+  <% for (const chart of contents.skills.charts) { %>
+    <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 mx-auto js-skills-chart">
+      <!-- Chart.js の描画に必要なデータ -->
+      <input type="hidden" class="js-skills-chart-data" value="<%- JSON.stringify(chart).replace(/\"/g, "'"); %>">
+      <!-- グラフエリア -->
+      <canvas class="js-skills-chart-canvas" width="600" height="600"></canvas>
+    </div>
+  <% } %>
+</div>
+
 <div class="row">
-  <div class="col-12 col-sm-8 col-md-6">
+  <div class="col-12 col-sm-11 col-lg-9 mx-auto">
     <table class="table table-borderless">
+      <% for (const list of contents.skills.lists) { %>
       <tr>
-        <th scope="row"></th>
-        <td></td>
+        <th scope="row" class="text-nowrap"><%= list.title %></th>
+        <td>
+          <% for (const [index, item] of list.values.entries()) { %>
+            <%- item.replace(/, /g, ' &nbsp; ') %>
+            <% if (item.includes('|')) { %>
+              <br>
+            <% } else if (index + 1 < list.values.length) { %>
+              &nbsp;
+            <% } %>
+          <% } %>
+        </td>
       </tr>
+      <% } %>
     </table>
   </div>
 </div>
