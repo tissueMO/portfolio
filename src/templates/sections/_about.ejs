@@ -60,6 +60,9 @@
   </div>
   <div class="row">
     <div class="col-lg-12">
+      <% for (const line of contents.beliefs) { %>
+        <p><%- line %></p>
+      <% } %>
     </div>
   </div>
 </div><!-- Beliefs -->
@@ -73,6 +76,9 @@
   </div>
   <div class="row">
     <div class="col-lg-12">
+      <% for (const line of contents.values) { %>
+        <p><%- line %></p>
+      <% } %>
     </div>
   </div>
 </div><!-- Values -->
@@ -86,6 +92,9 @@
   </div>
   <div class="row">
     <div class="col-lg-12">
+      <% for (const line of contents.strength) { %>
+        <p><%- line %></p>
+      <% } %>
     </div>
   </div>
 </div><!-- Strength -->
@@ -99,6 +108,9 @@
   </div>
   <div class="row">
     <div class="col-lg-12">
+      <% for (const line of contents.weakness) { %>
+        <p><%- line %></p>
+      <% } %>
     </div>
   </div>
 </div><!-- Weakness -->
@@ -112,6 +124,9 @@
   </div>
   <div class="row">
     <div class="col-lg-12">
+      <% for (const line of contents.wannatry) { %>
+        <p><%- line %></p>
+      <% } %>
     </div>
   </div>
 </div><!-- Wanna Try -->

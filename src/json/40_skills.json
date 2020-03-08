@@ -2,7 +2,7 @@
   "skills": {
     "charts": [
       {
-        "title": "システム開発工程別",
+        "title": "Processes",
         "type": "radar",
         "data": {
           "labels": [
@@ -23,19 +23,19 @@
         }
       },
       {
-        "title": "言語別",
+        "title": "Languages",
         "type": "radar",
         "data": {
           "labels": [
             "C#", "C++", "VB.NET", "Java",
-            "Python", "Node.js", "HTML5", "CSS3",
+            "Python", "Node.js", "HTML5/CSS3",
             "R", "bash", "PowerShell"
           ],
           "datasets": [
             {
               "data": [
                 90, 60, 60, 80,
-                80, 70, 70, 50,
+                80, 70, 60,
                 50, 40, 30
               ],
               "backgroundColor": "rgba(127, 255, 127, 0.3)",
@@ -46,7 +46,7 @@
         }
       },
       {
-        "title": "プラットフォーム別",
+        "title": "Platforms",
         "type": "radar",
         "data": {
           "labels": [

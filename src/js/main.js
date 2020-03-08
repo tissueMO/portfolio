@@ -80,8 +80,9 @@ $(() => {
       options: {
         title: {
           display: true,
-          fontSize: 24,
-          padding: 5,
+          fontSize: 26,
+          fontFamily: 'Montserrat, -apple-system, BlinkMacSystemFont, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, sans-serif',
+          padding: 7,
           text: chart.title
         },
         legend: {
