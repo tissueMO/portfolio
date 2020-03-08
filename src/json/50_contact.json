@@ -1,5 +1,19 @@
 {
   "contact": {
-    "open": true
+    "open": true,
+    "addresses": [
+      {
+        "icon": "<i class=\"far fa-envelope mr-1\"></i>",
+        "title": "dHMzMndvcmtlckBnbWFpbC5jb20=",
+        "address": "bWFpbHRvOnRzMzJ3b3JrZXJAZ21haWwuY29t",
+        "encode": true
+      },
+      {
+        "icon": "<i class=\"fab fa-github mr-1\"></i>",
+        "title": "@tissueMO",
+        "address": "https://github.com/tissueMO",
+        "encode": false
+      }
+    ]
   }
 }
