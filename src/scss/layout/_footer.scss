@@ -1,9 +1,6 @@
 @import "../../node_modules/startbootstrap-agency/scss/layout/footer.scss";
 
 footer {
-  background-color: #111;
-
-  .container {
-    color: white;
-  }
+  background-color: white;
+  @include heading-font;
 }

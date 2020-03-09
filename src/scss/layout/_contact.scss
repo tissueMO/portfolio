@@ -1,0 +1,21 @@
+#contact {
+  background-color: #111;
+
+  h2 {
+    &.section-heading {
+      color: white;
+    }
+  }
+
+  h3 {
+    &.section-subheading {
+      color: #aaa;
+    }
+  }
+
+  i {
+    &.fab, &.far, &.fas, &.fa, &.fal, &.fad {
+      color: white;
+    }
+  }
+}
