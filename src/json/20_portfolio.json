@@ -1,0 +1,144 @@
+{
+  "portfolio": [
+    {
+      "name": "$TEMPLATE",
+      "tag": "Game",
+      "thumbnail": "FILEPATH",
+      "images": "FILEPATH",
+      "lead": "作品に対するリード文",
+      "description": "",
+      "attributes": {
+        "製作時期": "",
+        "開発環境": "",
+        "作品カテゴリー": ""
+      }
+    },
+    {
+      "name": "$TEMPLATE",
+      "tag": "Game",
+      "thumbnail": "FILEPATH",
+      "images": [
+        "FILEPATH",
+        "FILEPATH"
+      ],
+      "lead": "作品に対するリード文",
+      "description": "",
+      "attributes": {
+        "製作時期": "",
+        "開発環境": "",
+        "作品カテゴリー": ""
+      }
+    },
+    {
+      "name": "$TEMPLATE",
+      "tag": "Game",
+      "thumbnail": "FILEPATH",
+      "images": [
+        {
+          "file": "FILEPATH",
+          "description": "画像に対する説明"
+        },
+        {
+          "file": "FILEPATH",
+          "description": "画像に対する説明"
+        }
+      ],
+      "lead": "作品に対するリード文",
+      "description": "",
+      "attributes": {
+        "製作時期": "",
+        "開発環境": "",
+        "作品カテゴリー": ""
+      }
+    },
+
+    {
+      "name": "RPG Developer NEXT",
+      "tag": "Windows アプリケーション",
+      "thumbnail": "rpgdev-thumb.jpg",
+      "images": [
+        {
+          "file": "rpgdev-full-1.jpg",
+          "description": "装備できる種別は複数設定できます。"
+        },
+        {
+          "file": "rpgdev-full-2.jpg",
+          "description": "「当たり判定」は画面下のパレットで事前に設定された情報が自動配置されます。"
+        },
+        {
+          "file": "rpgdev-full-3.jpg",
+          "description": "区画座標とは、画面中央のパレットの赤枠部分です。合成方法は加算・減算なども設定できます。"
+        }
+      ],
+      "lead": "RPGを開発するための統合オーサリングツール",
+      "description": "本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します",
+      "attributes": {
+        "製作時期": "2016-2017",
+        "開発環境": "MS .NET WinForms C# / C++ / DXライブラリ / Squirrel",
+        "作品カテゴリー": "Windowsアプリケーション"
+      }
+    },
+    {
+      "name": "マークシートリーダー",
+      "tag": "コマンドラインツール",
+      "thumbnail": "",
+      "images": "",
+      "lead": "特定のフォーマットに従って書き込んだマークシートの画像をCSVに一括取込するツール",
+      "description": "本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します",
+      "attributes": {
+        "製作時期": "2017",
+        "開発環境": "Python 3.x / OpenCV",
+        "作品カテゴリー": "コマンドラインツール"
+      }
+    },
+    {
+      "name": "もぐRing",
+      "tag": "ゲームソフト (チーム製作)",
+      "thumbnail": "digdig-mole-girl-thumb.png",
+      "images": [
+        "digdig-mole-girl-thumb.png",
+        "digdig-mole-girl-full.png"
+      ],
+      "lead": "穴掘りモグラ(美少女)が壊れてしまったお家を建て直すべく地中に埋まった木材を集める対戦ゲーム",
+      "description": "本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します",
+      "attributes": {
+        "製作時期": "2020",
+        "開発環境": "Unity / C# / VSCode",
+        "作品カテゴリー": "ゲームソフト",
+        "作品配布サイト": "https://globalgamejam.org/2020/games/dig-dig-digirl-9",
+        "リポジトリー": "https://github.com/tissueMO/ggj2020sap_digdigmolegirls"
+      }
+    },
+    {
+      "name": "トイレ在室監視ソリューション",
+      "tag": "IoT ソリューション",
+      "thumbnail": "door-watcher-thumb.png",
+      "images": "door-watcher-full.png",
+      "lead": "トイレのドアの開閉状況を監視して在室監視を行うソリューション",
+      "description": "遠隔地から個室トイレが使用中であるかどうかをリアルタイムで確認できるようにするソリューションです。<br>空室時にドアが開くタイプの個室トイレにのみ使用することができます。<br>もちろんトイレに限らず、使用中にのみドアが閉まるような設備であれば使用することができます。",
+      "attributes": {
+        "製作時期": "2020",
+        "開発環境": "VSCode / Docker / Python / Node.js / Arduino IDE",
+        "作品カテゴリー": "IoT ソリューション",
+        "リポジトリー": "https://github.com/tissueMO/door-watcher"
+      }
+    },
+    {
+      "name": "MESH カスタムタグ向けAPI群",
+      "tag": "IoT 向け汎用 API 群",
+      "thumbnail": "",
+      "images": "",
+      "lead": "MESH カスタムタグから呼び出すことを想定した、機能拡張用の汎用API群です。",
+      "description": "",
+      "attributes": {
+        "休日判定API": "リクエストを送った時点の時刻が土日祝祭日であるかどうかを判定します。Google Cloud Functions 上で稼働します。",
+        "汎用ステータス管理API": "特定の状態のON/OFFを管理するAPIです。特定のモノを所持したかどうか、特定の処方薬を服用したかどうか、等の用途に使います。Apache2 の mod_wsgi モジュール上で稼働します。",
+        "雨傘判定API": "通勤時間帯にあたる 9:00-10:00, 18:00-22:00 の札幌市の天気予報を取得し、雨傘を持っていく必要がありそうかどうかを5段階で返すAPIです。Apache2 の mod_wsgi モジュール上で稼働します。",
+        "製作時期": "2018-2020",
+        "開発環境": "VSCode / Python / Bottle / BeautifulSoup",
+        "作品カテゴリー": "IoT 向け汎用 API 群",
+        "リポジトリー": "https://github.com/tissueMO/mesh-custom-tags-api"
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+#contact {
+  background-color: #111;
+
+  h2 {
+    &.section-heading {
+      color: white;
+    }
+  }
+
+  h3 {
+    &.section-subheading {
+      color: #aaa;
+    }
+  }
+
+  p {
+    a, i {
+      font-size: 20px;
+    }
+
+    i {
+      &.fab, &.far, &.fas, &.fa, &.fal, &.fad {
+        color: white;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+// ##### Swiper #####
+@import "../../node_modules/swiper/css/swiper.min.css";
+
+// ##### Bootstrap Agency #####
+// Core variables and mixins
+@import "../../node_modules/startbootstrap-agency/scss/base/variables";
+@import "./base/mixins";
+
+// Vendor
+@import "./vendor/swiper";
+
+// Global CSS
+@import "./base/page";
+
+// Components
+@import "../../node_modules/startbootstrap-agency/scss/components/buttons";
+@import "./components/navbar";
+
+// Layout
+@import "../../node_modules/startbootstrap-agency/scss/layout/timeline";
+@import "./layout/portfolio";
+@import "./layout/masthead";
+@import "./layout/services";
+@import "./layout/skills";
+@import "./layout/contact";
+@import "./layout/footer";
