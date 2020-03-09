@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+<% const personName = '@tissueMO'; %>
 <html lang="en">
 
 <head>
-  <%- include('templates/_head'); %>
+  <%- include('templates/_head', { personName: personName }); %>
 </head>
 
 <body id="page-top">
-  <%- include('templates/_header'); %>
+  <%- include('templates/_header', { personName: personName }); %>
 
   <main>
     <!-- Works -->
@@ -49,7 +50,7 @@
   </div>
   <!-- Portfolio Modals -->
 
-  <%- include('templates/_footer'); %>
+  <%- include('templates/_footer', { personName: personName }); %>
 </body>
 
 </html>

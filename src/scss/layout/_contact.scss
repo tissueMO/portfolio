@@ -13,9 +13,16 @@
     }
   }
 
-  i {
-    &.fab, &.far, &.fas, &.fa, &.fal, &.fad {
-      color: white;
+  p {
+    a, i {
+      font-size: 20px;
+    }
+
+    i {
+      &.fab, &.far, &.fas, &.fa, &.fal, &.fad {
+        color: white;
+        margin-right: 0.5rem;
+      }
     }
   }
 }
