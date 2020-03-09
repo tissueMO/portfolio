@@ -8,18 +8,18 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserJSPlugin = require("terser-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin").CleanWebpackPlugin;
 const globule = require("globule");
+const args = require("args-parser")(process.argv);
 
 // 環境名
-// const ENV = "production";
-const ENV = "development";
+const IS_DEVELOP = !("production" in args);
 // ソースマップを生成するかどうか
-const USE_SOURCE_MAP = (ENV === "development");
+const USE_SOURCE_MAP = IS_DEVELOP;
 // ビルド先パス
 const DEST_PATH = path.join(__dirname, "./public");
 
-// エントリーポイントに含めるパターン
-const ejsTargetTypes = {ejs: "html"};
+// EJSのファイル変換ルール
 const getEntriesList = (targetTypes) => {
   const entriesList = {};
   for (const [srcType, targetType] of Object.entries(targetTypes)) {
@@ -47,17 +47,15 @@ const getDynamicContentsJsonFiles = () => {
 const dynamicContentsJsonFiles = getDynamicContentsJsonFiles();
 let dynamicContents = {};
 for (const jsonFile of dynamicContentsJsonFiles) {
-  // console.log(jsonFile);
   const jsonText = fs.readFileSync(jsonFile, "utf-8");
   const json = JSON.parse(jsonText);
   Object.assign(dynamicContents, json);
 }
-// console.log(dynamicContents);
 
 
 const app = {
-  mode: ENV,
-  devtool: (ENV === "development") ? "source-map" : false,
+  mode: IS_DEVELOP ? "development" : "production",
+  devtool: IS_DEVELOP ? "source-map" : false,
   entry: Object.assign(
     {
       app: [
@@ -65,7 +63,6 @@ const app = {
         "./src/scss/style.scss",
       ],
     },
-    getEntriesList(ejsTargetTypes)
   ),
   output: {
     path: path.resolve(__dirname, DEST_PATH),
@@ -107,7 +104,7 @@ const app = {
         }, {
           loader: "css-loader",
           options: {
-            sourceMap: (ENV === "development") ? USE_SOURCE_MAP : false,
+            sourceMap: IS_DEVELOP ? USE_SOURCE_MAP : false,
           },
         }, {
           loader: "postcss-loader",
@@ -119,7 +116,7 @@ const app = {
         }, {
           loader: "sass-loader",
           options: {
-            sourceMap: (ENV === "development") ? USE_SOURCE_MAP : false,
+            sourceMap: IS_DEVELOP ? USE_SOURCE_MAP : false,
           },
         }],
       },
@@ -155,7 +152,9 @@ const app = {
     ),
   ],
   optimization: {
-    minimizer: [].concat((ENV === "development") ? [] : [
+    minimizer: [
+      new CleanWebpackPlugin(),
+    ].concat(IS_DEVELOP ? [] : [
       // 本番モードのみ有効
       new TerserJSPlugin({}),
       new OptimizeCSSAssetsPlugin({}),
@@ -172,10 +171,8 @@ for (const [targetName, srcName] of Object.entries(getEntriesList({ejs: "html"})
   app.plugins.push(new HtmlWebpackPlugin({
     template: srcName,
     filename: targetName,
+    minify: true,
   }));
 }
-
-// console.log(app);
-// console.log(app.plugins);
 
 module.exports = [app];
