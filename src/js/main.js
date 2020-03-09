@@ -1,11 +1,11 @@
 // ###################################################################
 //    JS エントリーポイント
 // ###################################################################
-const $ = require('../../node_modules/jquery/dist/jquery');
-const Swiper = require('../../node_modules/swiper/js/swiper');
 const Chart = require('../../node_modules/chart.js/dist/Chart');
-const Base64 = require('../../node_modules/js-base64/base64').Base64;
-const pallete = require('../../node_modules/google-palette/palette');
+require('../../node_modules/jquery/dist/jquery');
+require('../../node_modules/swiper/js/swiper');
+require('../../node_modules/js-base64/base64');
+require('../../node_modules/google-palette/palette');
 require('../../node_modules/bootstrap/dist/js/bootstrap');
 
 // Chart.js のグローバル初期設定
@@ -14,128 +14,9 @@ Chart.defaults.global.defaultFontSize = 14;
 Chart.defaults.global.layout.padding = 14;
 Chart.defaults.global.elements.point.pointStyle = 'rect';
 
-$(() => {
-  // スムーズスクロール
-  $('a.js-scroll-trigger[href^="#"]:not([href="#"])').click(e => {
-    const href = $(e.currentTarget).attr('href');
-
-    $('html, body').animate({
-      scrollTop: $(href).offset().top - $('#main-nav').height()
-    });
-
-    return false;
-  });
-  $('.js-scroll-trigger').click(() => {
-    $('.navbar-collapse').collapse('hide');
-  });
-
-  // ナビゲーションバーのスクロールスパイ
-  $('body').scrollspy({
-    target: '#main-nav',
-    offset: $('#main-nav').height() + 2
-  });
-
-  // 一定のスクロール位置に達したらナビゲーションバーを縮める
-  const navbarCollapse = () => {
-    if ($('#main-nav').offset().top > 100) {
-      $('#main-nav, #main-nav .nav-item.dropdown .dropdown-menu').addClass('navbar-shrink');
-    } else {
-      $('#main-nav, #main-nav .nav-item.dropdown .dropdown-menu').removeClass('navbar-shrink');
-    }
-  };
-  navbarCollapse();
-  $(window).scroll(navbarCollapse);
-
-  // ポートフォリオモーダル内のSwiper
-  $('.js-portfolio-modal').on('shown.bs.modal', e => {
-    const $this = $('.swiper-container', e.currentTarget);
-    const index = $('.swiper-container').index($this);
-    if ($this.data('swiper')) {
-      // 既に初期化済み
-      $this.data('swiper').updateAutoHeight(100);
-      return;
-    }
-
-    $this.data('swiper', new Swiper(
-      `.swiper-container-portfolio-${index + 1}`, Object.assign({
-        slidesPerView: 1,
-        autoHeight: true
-      }, ($('.swiper-slide', $this).length <= 1) ? {} : {
-        loop: true,
-        pagination: {
-          el: `.swiper-pagination-portfolio-${index + 1}`,
-          type: 'bullets',
-          clickable: true
-        },
-        navigation: {
-          prevEl: `.swiper-button-prev-portfolio-${index + 1}`,
-          nextEl: `.swiper-button-next-portfolio-${index + 1}`
-        }
-      })
-    ));
-    $this.data('swiper').updateAutoHeight(100);
-  });
-
-  // スキルセクションのレーダーチャート
-  const colors = pallete('tol', $('.js-skills-chart').length, 3).map(hex => `#${hex}`);
-  $('.js-skills-chart').each((index, el) => {
-    const $this = $(el);
-    const $canvas = $('.js-skills-chart-canvas', el);
-    const chart = JSON.parse($('.js-skills-chart-data', $this).val().replace(/'/g, '"'));
-
-    // 自動生成したカラーを適用
-    chart.data.datasets[0].borderColor = colors[index];
-    chart.data.datasets[0].backgroundColor = `${colors[index]}33`;
-
-    $this.data('chart', new Chart($canvas[0], {
-      type: chart.type,
-      data: chart.data,
-      options: {
-        title: {
-          display: true,
-          fontSize: 26,
-          // fontFamily: 'Montserrat, -apple-system, BlinkMacSystemFont, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, sans-serif',
-          padding: 0,
-          text: chart.title
-        },
-        legend: {
-          display: false
-        },
-        scale: {
-          ticks: {
-            min: 0,
-            max: 100,
-            fontColor: 'rgba(127, 127, 127, 0.5)',
-            // backdropColor: 'rgba(0, 0, 0, 0)',
-            showLabelBackdrop: false,
-            beginAtZero: true,
-            backdropPaddingY: 5
-          },
-          pointLabels: {
-            fontSize: 16
-          }
-        },
-        tooltips: {
-          enabled: false
-        }
-      }
-    }));
-  });
-
-  // コンタクトセクションのデコード
-  $('.js-contact-item').each((index, el) => {
-    const $this = $(el);
-    if ($('input.js-encode', $this).length === 0) {
-      // 非エンコードの項目
-      return;
-    }
-
-    // エンコードされた項目をデコード
-    let href = $('.js-address-link', $this).attr('href');
-    let text = $('.js-address-link-text', $this).text().trim();
-    href = Base64.decode(href);
-    text = Base64.decode(text);
-    $('.js-address-link', $this).attr('href', href);
-    $('.js-address-link-text', $this).text(text);
-  });
-});
+// 分割ファイル読み込み
+require('./common');
+require('./navbar');
+require('./portfolio');
+require('./skills');
+require('./contact');
