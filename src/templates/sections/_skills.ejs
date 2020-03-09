@@ -5,14 +5,16 @@
 </div>
 
 <div class="row mb-4">
-  <% for (const chart of contents.skills.charts) { %>
-    <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 mx-auto js-skills-chart">
-      <!-- Chart.js の描画に必要なデータ -->
-      <input type="hidden" class="js-skills-chart-data" value="<%- JSON.stringify(chart).replace(/\"/g, "'"); %>">
-      <!-- グラフエリア -->
-      <canvas class="js-skills-chart-canvas" width="600" height="650"></canvas>
-    </div>
-  <% } %>
+  <div class="d-flex flex-wrap justify-content-center align-items-start mx-auto">
+    <% for (const chart of contents.skills.charts) { %>
+      <div class="align-self-stretch js-skills-chart">
+        <!-- Chart.js の描画に必要なデータ -->
+        <input type="hidden" class="js-skills-chart-data" value="<%- JSON.stringify(chart).replace(/\"/g, "'"); %>">
+        <!-- グラフエリア -->
+        <canvas class="js-skills-chart-canvas" height="350"></canvas>
+      </div>
+    <% } %>
+  </div>
 </div>
 
 <div class="row">

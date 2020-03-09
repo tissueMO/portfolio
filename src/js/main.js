@@ -5,7 +5,14 @@ const $ = require('../../node_modules/jquery/dist/jquery');
 const Swiper = require('../../node_modules/swiper/js/swiper');
 const Chart = require('../../node_modules/chart.js/dist/Chart');
 const Base64 = require('../../node_modules/js-base64/base64').Base64;
+const pallete = require('../../node_modules/google-palette/palette');
 require('../../node_modules/bootstrap/dist/js/bootstrap');
+
+// Chart.js のグローバル初期設定
+Chart.defaults.global.defaultFontFamily = 'Montserrat, -apple-system, BlinkMacSystemFont, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, sans-serif';
+Chart.defaults.global.defaultFontSize = 14;
+Chart.defaults.global.layout.padding = 14;
+Chart.defaults.global.elements.point.pointStyle = 'rect';
 
 $(() => {
   // スムーズスクロール
@@ -70,10 +77,15 @@ $(() => {
   });
 
   // スキルセクションのレーダーチャート
+  const colors = pallete('tol', $('.js-skills-chart').length, 3).map(hex => `#${hex}`);
   $('.js-skills-chart').each((index, el) => {
     const $this = $(el);
     const $canvas = $('.js-skills-chart-canvas', el);
     const chart = JSON.parse($('.js-skills-chart-data', $this).val().replace(/'/g, '"'));
+
+    // 自動生成したカラーを適用
+    chart.data.datasets[0].borderColor = colors[index];
+    chart.data.datasets[0].backgroundColor = `${colors[index]}33`;
 
     $this.data('chart', new Chart($canvas[0], {
       type: chart.type,
@@ -82,8 +94,8 @@ $(() => {
         title: {
           display: true,
           fontSize: 26,
-          fontFamily: 'Montserrat, -apple-system, BlinkMacSystemFont, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, sans-serif',
-          padding: 7,
+          // fontFamily: 'Montserrat, -apple-system, BlinkMacSystemFont, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, sans-serif',
+          padding: 0,
           text: chart.title
         },
         legend: {
@@ -94,8 +106,17 @@ $(() => {
             min: 0,
             max: 100,
             fontColor: 'rgba(127, 127, 127, 0.5)',
-            backgroundColor: 'rgba(0, 0, 0, 0)'
+            // backdropColor: 'rgba(0, 0, 0, 0)',
+            showLabelBackdrop: false,
+            beginAtZero: true,
+            backdropPaddingY: 5
+          },
+          pointLabels: {
+            fontSize: 16
           }
+        },
+        tooltips: {
+          enabled: false
         }
       }
     }));

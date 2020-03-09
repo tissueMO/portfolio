@@ -6,18 +6,18 @@
         "type": "radar",
         "data": {
           "labels": [
-            "要件定義", "外部設計", "詳細設計", "アーキテクチャー設計",
-            "画面デザイン", "製造", "試験", "保守/運用"
+            "要件定義", "アーキテクチャ", "外部設計", "詳細設計",
+            "画面デザイン", "製造", "試験", "保守", "運用"
           ],
           "datasets": [
             {
               "data": [
-                40, 70, 80, 75,
-                65, 90, 60, 30
+                40, 75, 70, 80,
+                65, 95, 60, 60, 30
               ],
               "backgroundColor": "rgba(255, 127, 127, 0.3)",
               "borderColor": "rgb(255, 80, 80)",
-              "borderWidth": 3
+              "borderWidth": 2
             }
           ]
         }
@@ -27,20 +27,20 @@
         "type": "radar",
         "data": {
           "labels": [
-            "C#", "C++", "VB.NET", "Java",
-            "Python", "Node.js", "HTML5/CSS3",
-            "R", "bash", "PowerShell"
+            "C#", "Java", "Python", "Node.js",
+            "C++", "VB.NET", "HTML5/CSS3",
+            "R", "Bash", "PowerShell"
           ],
           "datasets": [
             {
               "data": [
-                90, 60, 60, 80,
-                80, 70, 60,
-                50, 40, 30
+                90, 80, 80, 70,
+                60, 60, 70,
+                50, 40, 20
               ],
               "backgroundColor": "rgba(127, 255, 127, 0.3)",
               "borderColor": "rgb(80, 255, 80)",
-              "borderWidth": 3
+              "borderWidth": 2
             }
           ]
         }
@@ -50,18 +50,18 @@
         "type": "radar",
         "data": {
           "labels": [
-            "Windows アプリ", "Mac アプリ", "iOS アプリ", "Android アプリ",
-            "フロントエンド", "サーバーサイド"
+            "Windows", "ASP.NET", "Mac", "iOS",
+            "Android", "Frontend", "Linux"
           ],
           "datasets": [
             {
               "data": [
-                70, 0, 0, 30,
-                70, 80
+                70, 0, 0, 0,
+                15, 70, 80
               ],
               "backgroundColor": "rgba(127, 127, 255, 0.3)",
               "borderColor": "rgb(80, 80, 255)",
-              "borderWidth": 3
+              "borderWidth": 2
             }
           ]
         }
