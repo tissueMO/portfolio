@@ -36,11 +36,13 @@ for (const item of contents.portfolio) {
             <div class="swiper-slide">
               <img class="img-fluid d-block mx-auto" src="/img/portfolio/no-image.png" alt="<%= item.name %>">
             </div>
-            <%
-                } else {
-            %>
+            <%  } else { %>
             <div class="swiper-slide">
+              <% if (item.images.includes('<iframe')) { %>
+                <%- item.images %>
+              <% } else { %>
               <img class="img-fluid d-block mx-auto" src="/img/portfolio/<%- item.images %>" alt="<%= item.name %>">
+              <% } %>
             </div>
             <%
                 }
@@ -52,11 +54,16 @@ for (const item of contents.portfolio) {
                 for (const image of item.images) {
                   if (typeof image === 'string') {
                     // 画像のファイル名
+                    if (image.includes('<iframe')) {
             %>
+            <div class="swiper-slide">
+              <%- image %>
+            </div>
+            <% } else { %>
             <div class="swiper-slide">
               <img class="img-fluid d-block mx-auto" src="/img/portfolio/<%- image %>" alt="<%= item.name %>">
             </div>
-            <%
+            <%      }
                   } else {
                     // 画像ファイル名と補足文のセット
             %>
