@@ -7,6 +7,13 @@
         font-style: normal;
       }
     }
+
+    img.img-thumb {
+      // アスペクト比を保ったまま拡縮に合わせて画像をCropする
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
   }
 }
 
