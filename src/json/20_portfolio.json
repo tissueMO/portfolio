@@ -19,7 +19,8 @@
       "thumbnail": "FILEPATH",
       "images": [
         "FILEPATH",
-        "FILEPATH"
+        "FILEPATH",
+        "<div class=\"embed-responsive embed-responsive-16by9\"><iframe class=\"embed-responsive-item\" src=\"...\"></iframe></div>"
       ],
       "lead": "作品に対するリード文",
       "description": "",
@@ -99,14 +100,42 @@
         "digdig-mole-girl-thumb.png",
         "digdig-mole-girl-full.png"
       ],
-      "lead": "穴掘りモグラ(美少女)が壊れてしまったお家を建て直すべく地中に埋まった木材を集める対戦ゲーム",
-      "description": "本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します",
+      "lead": "Global Game Jam 2020 参加実績",
+      "description": "穴掘りモグラ(美少女)が壊れてしまったお家を建て直すべく地中に埋まった木材を集める対戦ゲーム",
       "attributes": {
         "製作時期": "2020",
-        "開発環境": "Unity / C# / VSCode",
+        "チーム規模": "6名",
+        "担当領域": "プロトタイプ版をベースにした本開発全般",
+        "開発環境": "Unity / C# / Visual Studio",
         "作品カテゴリー": "ゲームソフト",
         "作品配布サイト": "https://globalgamejam.org/2020/games/dig-dig-digirl-9",
         "リポジトリー": "https://github.com/tissueMO/ggj2020sap_digdigmolegirls"
+      }
+    },
+    {
+      "name": "鳥人コンテスト",
+      "tag": "ゲームソフト (チーム製作)",
+      "thumbnail": "birdcontest-thumb.png",
+      "images": [
+        "birdcontest-full-1.png",
+        "<div class=\"embed-responsive embed-responsive-16by9\"><iframe class=\"embed-responsive-item\" src=\"https://www.youtube.com/embed/4LuvmbGfFSs\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe></div>",
+        "birdcontest-full-2.png",
+        "birdcontest-full-3.png",
+        "birdcontest-full-4.png",
+        "birdcontest-full-5.png",
+        "birdcontest-full-6.png",
+        "birdcontest-full-7.png"
+      ],
+      "lead": "2018年の北海道大学楡陵祭出展作品",
+      "description": "<h3>ゲームの概要</h3><br>キミたち３人は「鳥人コンテスト」に出場するチームメイトだ。<br>一人は助走をつけ、一人は飛行機のペダルを漕ぎ、一人はそれをサポートする。<br>それぞれがめちゃくちゃに動いて、人力飛行機で遠くを目指せ！",
+      "attributes": {
+        "製作時期": "2018",
+        "チーム規模": "6名",
+        "担当領域": "ディレクション、ゲームマスター部開発、オーディエンス投票機能開発、その他品質管理等",
+        "開発環境": "Java / HTML / CSS / JavaScript / Unity / C# / Visual Studio",
+        "作品カテゴリー": "ゲームソフト",
+        "作品配布サイト": "特殊な実行環境を必要とするため、一般配布は行っておりません。",
+        "リポジトリー": "https://github.com/kawaz-ouc-201803-homerun/birdcontest"
       }
     },
     {

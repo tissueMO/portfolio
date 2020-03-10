@@ -3,7 +3,7 @@
     {
       "name": "$TEMPLATE",
       "icon": "<i class=\"fas fa-stack-1x fa-inverse fa-chart-bar\"></i>",
-      "description": "この項目に対する補足説明"
+      "description": "##### この項目に対する補足説明 #####"
     },
 
     {
@@ -19,7 +19,7 @@
     {
       "name": "Google Cloud Vision を用いた名刺の読取～発注サービス",
       "icon": "<i class=\"fas fa-stack-1x fa-inverse fa-address-card\"></i>",
-      "description": "スマートフォン等で撮影した名刺の画像をアップロードするだけで名刺の輪郭、文字内容を読み取り、読み取った結果を編集して実際の発注まで行える某オーダーメイド型ECサイトのサービスです。"
+      "description": "スマートフォン等で撮影した名刺画像をアップロードするだけで名刺の輪郭検出、文字内容の読み取りまでを自動で行い、仕上げに自由レイアウト編集して発注までを行える某オフィス通販サイトのサービス。"
     },
     {
       "name": "店舗型会員制サービスの退会予測AIモデル",
