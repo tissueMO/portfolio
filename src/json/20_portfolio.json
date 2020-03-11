@@ -54,7 +54,7 @@
     },
 
     {
-      "name": "RPG Developer NEXT",
+      "name": "[未完成] RPG Developer NEXT",
       "tag": "Windows アプリケーション",
       "thumbnail": "rpgdev-thumb.jpg",
       "images": [
@@ -74,22 +74,10 @@
       "lead": "RPGを開発するための統合オーサリングツール",
       "description": "本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します",
       "attributes": {
-        "製作時期": "2016-2017",
+        "製作時期": "2016年-2017年",
         "開発環境": "MS .NET WinForms C# / C++ / DXライブラリ / Squirrel",
-        "作品カテゴリー": "Windowsアプリケーション"
-      }
-    },
-    {
-      "name": "マークシートリーダー",
-      "tag": "コマンドラインツール",
-      "thumbnail": "",
-      "images": "",
-      "lead": "特定のフォーマットに従って書き込んだマークシートの画像をCSVに一括取込するツール",
-      "description": "本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します",
-      "attributes": {
-        "製作時期": "2017",
-        "開発環境": "Python 3.x / OpenCV",
-        "作品カテゴリー": "コマンドラインツール"
+        "作品カテゴリー": "Windowsアプリケーション",
+        "リポジトリー": ""
       }
     },
     {
@@ -103,7 +91,7 @@
       "lead": "Global Game Jam 2020 参加実績",
       "description": "穴掘りモグラ(美少女)が壊れてしまったお家を建て直すべく地中に埋まった木材を集める対戦ゲーム",
       "attributes": {
-        "製作時期": "2020",
+        "製作時期": "2020年",
         "チーム規模": "6名",
         "担当領域": "プロトタイプ版をベースにした本開発全般",
         "開発環境": "Unity / C# / Visual Studio",
@@ -113,12 +101,45 @@
       }
     },
     {
+      "name": "トイレ在室監視ソリューション",
+      "tag": "IoT ソリューション",
+      "thumbnail": "door-watcher-thumb.png",
+      "images": [
+        "door-watcher-full.png"
+      ],
+      "lead": "トイレのドアの開閉状況を監視して在室監視を行うソリューション",
+      "description": "スマートフォン等から個室トイレが使用中であるかどうかをリアルタイムで確認できるようにするソリューションです。<br>リードスイッチには Wi-Fi モジュール内蔵の ESPr Door Sensor を採用し、空室時にドアが開くタイプの個室トイレに設置できるようにしました。",
+      "attributes": {
+        "製作時期": "2020年",
+        "開発環境": "VSCode / Docker / Apache HTTP Server<br>Python / SQLite / Node.js / Bootstrap<br>Arduino IDE",
+        "作品カテゴリー": "IoT ソリューション",
+        "リポジトリー": "https://github.com/tissueMO/door-watcher"
+      }
+    },
+    {
+      "name": "小樽商科大学 創作活動部 Webサイト",
+      "tag": "Webサイト (WordPress テーマ)",
+      "thumbnail": "soukatsu-ouc-thumb.png",
+      "images": "soukatsu-ouc-full-1.png",
+      "lead": "WordPress 自作テーマ",
+      "description": "大学時代に創立したサイトの更新作業を引き継ぎやすくするべく、CMS (WordPress) を導入して丸ごと移行したものです。<br>移行当初は節約も兼ねて自宅のサーバー上で運用していましたが、2019年よりさくらのレンタルサーバに移行し、運用の労力を大幅にカットしました。",
+      "attributes": {
+        "製作時期": "2018年",
+        "チーム規模": "2名",
+        "担当領域": "静的HTMLデザインをベースとしたWordPress用動的テンプレートの作成、インフラ構築、移行等",
+        "開発環境": "PHP / WordPress / VSCode",
+        "作品カテゴリー": "Webサイト",
+        "公開サイト": "https://soukatsu-ouc.com/",
+        "リポジトリー": "https://github.com/soukatsu-ouc-programmers/website"
+      }
+    },
+    {
       "name": "鳥人コンテスト",
       "tag": "ゲームソフト (チーム製作)",
       "thumbnail": "birdcontest-thumb.png",
       "images": [
-        "birdcontest-full-1.png",
         "<div class=\"embed-responsive embed-responsive-16by9\"><iframe class=\"embed-responsive-item\" src=\"https://www.youtube.com/embed/4LuvmbGfFSs\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe></div>",
+        "birdcontest-full-1.png",
         "birdcontest-full-2.png",
         "birdcontest-full-3.png",
         "birdcontest-full-4.png",
@@ -126,30 +147,16 @@
         "birdcontest-full-6.png",
         "birdcontest-full-7.png"
       ],
-      "lead": "2018年の北海道大学楡陵祭出展作品",
-      "description": "<h3>ゲームの概要</h3><br>キミたち３人は「鳥人コンテスト」に出場するチームメイトだ。<br>一人は助走をつけ、一人は飛行機のペダルを漕ぎ、一人はそれをサポートする。<br>それぞれがめちゃくちゃに動いて、人力飛行機で遠くを目指せ！",
+      "lead": "2018年度北海道大学楡陵祭 出展作品",
+      "description": "<h4>製作の背景</h4><p>札幌ゲーム制作者コミュニティ「Kawaz」学生部さんとの合同企画です。<br>「3人のプレイヤーが全く別のミニゲームをこなして、その結果を合体させたらどうなる！？」というドキドキ感をコンセプトに、展示専用のゲームとして開発しました。<br>スクリーン上の画面で各プレイヤーのプレイ実況を行いつつ、ギャラリーが飛行結果をスマホから投票できる仕組みも盛り込みました。  <h4>ゲームのあらすじ</h4><p>キミたち3人は「鳥人コンテスト」に出場するチームメイトだ。<br>一人は助走をつけ、一人は飛行機のペダルを漕ぎ、一人はそれをサポートする。<br>それぞれがめちゃくちゃに動いて、人力飛行機で遠くを目指せ！</p>",
       "attributes": {
-        "製作時期": "2018",
+        "製作時期": "2018年",
         "チーム規模": "6名",
         "担当領域": "ディレクション、ゲームマスター部開発、オーディエンス投票機能開発、その他品質管理等",
-        "開発環境": "Java / HTML / CSS / JavaScript / Unity / C# / Visual Studio",
+        "開発環境": "Java / Apache Tomcat<br>HTML / CSS / JavaScript<br>Unity / C# / Visual Studio",
         "作品カテゴリー": "ゲームソフト",
         "作品配布サイト": "特殊な実行環境を必要とするため、一般配布は行っておりません。",
         "リポジトリー": "https://github.com/kawaz-ouc-201803-homerun/birdcontest"
-      }
-    },
-    {
-      "name": "トイレ在室監視ソリューション",
-      "tag": "IoT ソリューション",
-      "thumbnail": "door-watcher-thumb.png",
-      "images": "door-watcher-full.png",
-      "lead": "トイレのドアの開閉状況を監視して在室監視を行うソリューション",
-      "description": "遠隔地から個室トイレが使用中であるかどうかをリアルタイムで確認できるようにするソリューションです。<br>空室時にドアが開くタイプの個室トイレにのみ使用することができます。<br>もちろんトイレに限らず、使用中にのみドアが閉まるような設備であれば使用することができます。",
-      "attributes": {
-        "製作時期": "2020",
-        "開発環境": "VSCode / Docker / Python / Node.js / Arduino IDE",
-        "作品カテゴリー": "IoT ソリューション",
-        "リポジトリー": "https://github.com/tissueMO/door-watcher"
       }
     },
     {
@@ -163,10 +170,24 @@
         "休日判定API": "リクエストを送った時点の時刻が土日祝祭日であるかどうかを判定します。Google Cloud Functions 上で稼働します。",
         "汎用ステータス管理API": "特定の状態のON/OFFを管理するAPIです。特定のモノを所持したかどうか、特定の処方薬を服用したかどうか、等の用途に使います。Apache2 の mod_wsgi モジュール上で稼働します。",
         "雨傘判定API": "通勤時間帯にあたる 9:00-10:00, 18:00-22:00 の札幌市の天気予報を取得し、雨傘を持っていく必要がありそうかどうかを5段階で返すAPIです。Apache2 の mod_wsgi モジュール上で稼働します。",
-        "製作時期": "2018-2020",
+        "製作時期": "2018年-2020年",
         "開発環境": "VSCode / Python / Bottle / BeautifulSoup",
         "作品カテゴリー": "IoT 向け汎用 API 群",
         "リポジトリー": "https://github.com/tissueMO/mesh-custom-tags-api"
+      }
+    },
+    {
+      "name": "マークシートリーダー",
+      "tag": "コマンドラインツール",
+      "thumbnail": "",
+      "images": "",
+      "lead": "特定のフォーマットに従って書き込んだマークシートの画像をCSVに一括取込するツール",
+      "description": "本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します",
+      "attributes": {
+        "製作時期": "2017年",
+        "開発環境": "Python 3.x / OpenCV",
+        "作品カテゴリー": "コマンドラインツール",
+        "リポジトリー": "https://github.com/tissueMO/marksheet-reader"
       }
     }
   ]

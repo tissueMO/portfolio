@@ -33,9 +33,11 @@ for (const item of contents.portfolio) {
                 if (item.images === '') {
                   // 画像未設定
             %>
+            <!--
             <div class="swiper-slide">
-              <img class="img-fluid d-block mx-auto" src="/img/portfolio/no-image.png" alt="<%= item.name %>">
+              <img class="img-fluid d-block mx-auto" src="/img/portfolio/no-image-full.png" alt="<%= item.name %>">
             </div>
+            -->
             <%  } else { %>
             <div class="swiper-slide">
               <% if (item.images.includes('<iframe')) { %>
@@ -84,7 +86,7 @@ for (const item of contents.portfolio) {
           <% } %>
         </div>
 
-        <p class="my-5"><%- item.description %></p>
+        <div class="my-5 text-left"><%- item.description %></div>
 
         <% if (item.attributes) { %>
         <table class="table table-borderless col-12 col-lg-8 col-xl-6 mx-auto">
@@ -100,7 +102,7 @@ for (const item of contents.portfolio) {
                 </a>
               </td>
               <% } else { %>
-              <td><%= item.attributes[key] %></td>
+              <td><%- item.attributes[key] %></td>
               <% } %>
             </tr>
             <% } %>
