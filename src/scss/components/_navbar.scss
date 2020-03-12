@@ -1,5 +1,5 @@
 #main-nav {
-  background-color: $gray-900;
+  background-color: #111;
 
   .dropdown-menu {
     &.show {
@@ -110,12 +110,12 @@
     }
 
     &.navbar-shrink {
-      background-color: #111;;
+      background-color: #111;
       margin-top: 0;
 
       .dropdown-item {
         &.active, &:hover {
-          background-color: #111;;
+          background-color: #111;
         }
       }
     }

@@ -14,7 +14,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-12">
+    <div class="col-lg-12 d-flex justify-content-center">
       <ul class="timeline">
         <%
           let flip = true;
@@ -23,9 +23,12 @@
         %>
         <li class="<%= flip ? 'timeline-inverted' : '' %>">
           <div class="timeline-image">
-            <!-- <img class="rounded-circle img-fluid" src="" alt=""> -->
-            <%- timeline.image %>
-          </div>
+            <% if (timeline.image.startsWith('<')) { %>
+              <%- timeline.image %>
+            <% } else { %>
+              <img class="rounded-circle img-fluid" src="/img/career/<%- timeline.image %>" alt="Career">
+            <% } %>
+            </div>
           <div class="timeline-panel">
             <div class="timeline-heading">
               <h4><%= timeline.date %></h4>
@@ -36,14 +39,21 @@
             </div>
           </div>
         </li>
-        <% } %>
-        <li>
+        <%
+          }
+          flip = !flip;
+        %>
+        <li class="<%= flip ? 'timeline-inverted' : '' %>">
           <div class="timeline-image">
-            <h4>
-              そして<br>
-              現在に<br>
-              至る
-            </h4>
+            <img class="rounded-circle img-fluid" src="/img/career/career-e.png" alt="Career">
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="subheading">そして、現在に至る</h4>
+            </div>
+            <div class="timeline-body">
+              <p class="text-muted">さらなる高みを目指して奮闘中。</p>
+            </div>
           </div>
         </li>
       </ul>
@@ -60,28 +70,20 @@
   </div>
   <div class="row">
     <div class="col-lg-12">
-      <% for (const line of contents.beliefs) { %>
-        <p><%- line %></p>
+      <% for (const text of contents.beliefs) { %>
+        <% if (typeof text === 'string') { %>
+          <h4><%- text %></h4>
+        <% } else { %>
+          <p class="px-lg-5 mx-lg-5">
+            <% for (const paragraph of text) { %>
+              <%- paragraph %><br>
+            <% } %>
+          </p>
+        <% } %>
       <% } %>
     </div>
   </div>
 </div><!-- Beliefs -->
-
-<!-- Values -->
-<div class="container page-section" id="values">
-  <div class="row">
-    <div class="col-lg-12 text-center">
-      <h3 class="text-uppercase"><span class="h3 font-weight-bold">Values</span></h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-12">
-      <% for (const line of contents.values) { %>
-        <p><%- line %></p>
-      <% } %>
-    </div>
-  </div>
-</div><!-- Values -->
 
 <!-- Strength -->
 <div class="container page-section" id="strength">
@@ -91,10 +93,12 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-12">
-      <% for (const line of contents.strength) { %>
-        <p><%- line %></p>
-      <% } %>
+    <div class="col-lg-12 d-flex justify-content-center">
+      <ul class="about-list">
+        <% for (const text of contents.strength) { %>
+          <li class="h5 my-3"><%- text %></li>
+        <% } %>
+      </ul>
     </div>
   </div>
 </div><!-- Strength -->
@@ -107,10 +111,12 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-12">
-      <% for (const line of contents.weakness) { %>
-        <p><%- line %></p>
-      <% } %>
+    <div class="col-lg-12 d-flex justify-content-center">
+      <ul class="about-list">
+        <% for (const text of contents.weakness) { %>
+          <li class="h5 my-3"><%- text %></li>
+        <% } %>
+      </ul>
     </div>
   </div>
 </div><!-- Weakness -->
@@ -123,10 +129,12 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-12">
-      <% for (const line of contents.wannatry) { %>
-        <p><%- line %></p>
-      <% } %>
+    <div class="col-lg-12 d-flex justify-content-center">
+      <ul class="about-list">
+        <% for (const text of contents.wannatry) { %>
+          <li class="h5 my-3"><%- text %></li>
+        <% } %>
+      </ul>
     </div>
   </div>
 </div><!-- Wanna Try -->
