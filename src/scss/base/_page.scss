@@ -1,5 +1,9 @@
 @import "../../../node_modules/startbootstrap-agency/scss/base/page";
 
+main {
+  overflow-x: hidden;
+}
+
 small {
   .material-icons {
     font-size: 18px;
