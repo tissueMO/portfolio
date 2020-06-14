@@ -54,30 +54,58 @@
     },
 
     {
-      "name": "[未完成] RPG Developer NEXT",
+      "name": "RPG Developer NEXT",
       "tag": "Windows アプリケーション",
-      "thumbnail": "rpgdev-thumb.jpg",
+      "thumbnail": "rpgdev-next-thumb.jpg",
       "images": [
-        {
-          "file": "rpgdev-full-1.jpg",
-          "description": "装備できる種別は複数設定できます。"
-        },
-        {
-          "file": "rpgdev-full-2.jpg",
-          "description": "「当たり判定」は画面下のパレットで事前に設定された情報が自動配置されます。"
-        },
-        {
-          "file": "rpgdev-full-3.jpg",
-          "description": "区画座標とは、画面中央のパレットの赤枠部分です。合成方法は加算・減算なども設定できます。"
-        }
+        "rpgdev-next-1.jpg",
+        "rpgdev-next-2.png",
+        "rpgdev-next-3.png",
+        "rpgdev-next-4.png",
+        "rpgdev-next-5.png",
+        "rpgdev-next-6.png"
       ],
-      "lead": "RPGを開発するための統合オーサリングツール",
-      "description": "本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します本文を入力します",
+      "lead": "2D-RPG 統合オーサリングソフト",
+      "description": "「RPG◯クール」や「W◯LF RPGエディター」のようなオリジナルRPGを製作するためのソフトウェアと、それによって作られたゲームが動作するゲームエンジンです。<br>一般的なRPGの開発に必要な機能を最低限持たせたゲームプログラムをベースに、組み込み用のスクリプト「Squirrel」を使って拡張していくことで大幅な工数削減を図ることができます。<br>上記2つの類似ソフトには無かった「プレーンテキストによるファイル管理」を行うことにより、Git等のバージョン管理ツールを用いたチーム開発も実現可能です。",
       "attributes": {
-        "製作時期": "2016年-2017年",
-        "開発環境": "MS .NET WinForms C# / C++ / DXライブラリ / Squirrel",
-        "作品カテゴリー": "Windowsアプリケーション",
-        "リポジトリー": ""
+        "製作時期": "2016年-2020年",
+        "開発環境": "MS .NET WinForms C# / Visual C++<br>DXライブラリ / Squirrel",
+        "作品カテゴリー": "Windows アプリケーション",
+        "リポジトリー": "https://github.com/tissueMO/rpgdev-next"
+      }
+    },
+    {
+      "name": "賞味期限管理ソリューション",
+      "tag": "Windows アプリケーション",
+      "thumbnail": "expiration-date-manager-thumb.png",
+      "images": [
+        "expiration-date-manager-1.png",
+        "expiration-date-manager-2.png",
+        "expiration-date-manager-3.png"
+      ],
+      "lead": "食料品の賞味期限・消費期限を管理して通知まで行うソリューション",
+      "description": "専用のカメラを使ってスキャンするだけで食料品の賞味期限・消費期限の日付を読み取り、その期限日が近づくとSlackに通知してくれる一連の仕組みを構築しました。<br>Slackのワークスペース上に買い物リスト用のチャンネルを用意することで、期限が迫ってきた際にそのチャンネルへ投稿する機能も搭載しています。",
+      "attributes": {
+        "製作時期": "2020年",
+        "開発環境": "VSCode / Docker / Apache HTTP Server<br>Python / SQLite<br>Arduino IDE / MaixPy IDE<br>M5Stack / UnitV AI Camera",
+        "作品カテゴリー": "IoT ソリューション",
+        "リポジトリー": "https://github.com/tissueMO/expiration-date-manager"
+      }
+    },
+    {
+      "name": "トイレ在室監視ソリューション",
+      "tag": "IoT ソリューション",
+      "thumbnail": "door-watcher-thumb.png",
+      "images": [
+        "door-watcher-full.png"
+      ],
+      "lead": "トイレのドアの開閉状況を監視して在室監視を行うソリューション",
+      "description": "スマートフォン等から個室トイレが使用中であるかどうかをリアルタイムで確認できるようにする一連の仕組みを構築しました。<br>リードスイッチには Wi-Fi モジュール内蔵の ESPr Door Sensor を採用し、空室時にドアが開くタイプの個室トイレに設置できるようにしました。",
+      "attributes": {
+        "製作時期": "2020年",
+        "開発環境": "VSCode / Docker / Apache HTTP Server<br>Python / SQLite / Node.js / Bootstrap<br>Arduino IDE",
+        "作品カテゴリー": "IoT ソリューション",
+        "リポジトリー": "https://github.com/tissueMO/door-watcher"
       }
     },
     {
@@ -98,22 +126,6 @@
         "作品カテゴリー": "ゲームソフト",
         "作品配布サイト": "https://globalgamejam.org/2020/games/dig-dig-digirl-9",
         "リポジトリー": "https://github.com/tissueMO/ggj2020sap_digdigmolegirls"
-      }
-    },
-    {
-      "name": "トイレ在室監視ソリューション",
-      "tag": "IoT ソリューション",
-      "thumbnail": "door-watcher-thumb.png",
-      "images": [
-        "door-watcher-full.png"
-      ],
-      "lead": "トイレのドアの開閉状況を監視して在室監視を行うソリューション",
-      "description": "スマートフォン等から個室トイレが使用中であるかどうかをリアルタイムで確認できるようにするソリューションです。<br>リードスイッチには Wi-Fi モジュール内蔵の ESPr Door Sensor を採用し、空室時にドアが開くタイプの個室トイレに設置できるようにしました。",
-      "attributes": {
-        "製作時期": "2020年",
-        "開発環境": "VSCode / Docker / Apache HTTP Server<br>Python / SQLite / Node.js / Bootstrap<br>Arduino IDE",
-        "作品カテゴリー": "IoT ソリューション",
-        "リポジトリー": "https://github.com/tissueMO/door-watcher"
       }
     },
     {
@@ -157,23 +169,6 @@
         "作品カテゴリー": "ゲームソフト",
         "作品配布サイト": "特殊な実行環境を必要とするため、一般配布は行っておりません。",
         "リポジトリー": "https://github.com/kawaz-ouc-201803-homerun/birdcontest"
-      }
-    },
-    {
-      "name": "MESH カスタムタグ向けAPI群",
-      "tag": "IoT 向け汎用 API 群",
-      "thumbnail": "",
-      "images": "",
-      "lead": "MESH カスタムタグから呼び出すことを想定した、機能拡張用の汎用API群です。",
-      "description": "",
-      "attributes": {
-        "休日判定API": "リクエストを送った時点の時刻が土日祝祭日であるかどうかを判定します。Google Cloud Functions 上で稼働します。",
-        "汎用ステータス管理API": "特定の状態のON/OFFを管理するAPIです。特定のモノを所持したかどうか、特定の処方薬を服用したかどうか、等の用途に使います。Apache2 の mod_wsgi モジュール上で稼働します。",
-        "雨傘判定API": "通勤時間帯にあたる 9:00-10:00, 18:00-22:00 の札幌市の天気予報を取得し、雨傘を持っていく必要がありそうかどうかを5段階で返すAPIです。Apache2 の mod_wsgi モジュール上で稼働します。",
-        "製作時期": "2018年-2020年",
-        "開発環境": "VSCode / Python / Bottle / BeautifulSoup",
-        "作品カテゴリー": "IoT 向け汎用 API 群",
-        "リポジトリー": "https://github.com/tissueMO/mesh-custom-tags-api"
       }
     },
     {
