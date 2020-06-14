@@ -13,15 +13,15 @@
       }
       idCounter++;
   %>
-  <div class="col-12 col-sm-6 col-md-4 col-xl-3 d-flex flex-column portfolio-item">
+  <div class="col-12 col-sm-6 col-lg-4 col-xl-3 d-flex flex-column portfolio-item">
     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal<%- idCounter %>">
       <div class="portfolio-hover">
         <div class="portfolio-hover-content">詳しく見る</div>
       </div>
       <% if (item.thumbnail === '') { %>
-      <img class="img-fluid" src="/img/portfolio/no-image.png" alt="<%- item.name %>">
+      <img class="img-thumb" src="/img/portfolio/no-image-thumb.png" alt="<%- item.name %>">
       <% } else { %>
-        <img class="img-fluid" src="/img/portfolio/<%- item.thumbnail %>" alt="<%- item.name %>">
+        <img class="img-thumb" src="/img/portfolio/<%- item.thumbnail %>" alt="<%- item.name %>">
         <% } %>
     </a>
     <div class="w-100 flex-fill d-flex flex-column justify-content-center portfolio-caption">

@@ -7,6 +7,13 @@
         font-style: normal;
       }
     }
+
+    img.img-thumb {
+      // アスペクト比を保ったまま拡縮に合わせて画像をCropする
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
   }
 }
 
@@ -14,6 +21,34 @@
   .modal-content {
     .item-intro {
       @include body-font;
+    }
+
+    .swiper-wrapper {
+      position: relative;
+
+      * {
+        outline: none;
+      }
+
+      .swiper-container {
+        width: calc(100% - 100px);
+        box-sizing: content-box;
+      }
+
+      .swiper-pagination {
+        width: 100%;
+        bottom: 14px;
+
+        .swiper-pagination-bullet {
+          margin-left: 3px;
+          margin-right: 3px;
+        }
+      }
+
+      .swiper-button-prev, .swiper-button-next {
+        top: calc((100% - 50px) * 0.5);
+        margin-top: -22px;
+      }
     }
   }
 }

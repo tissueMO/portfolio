@@ -1,5 +1,9 @@
 @import "../../../node_modules/startbootstrap-agency/scss/base/page";
 
+main {
+  overflow-x: hidden;
+}
+
 small {
   .material-icons {
     font-size: 18px;
@@ -21,7 +25,7 @@ section.page-section {
       .h3 {
         position: relative;
         display: inline-block;
-        margin-bottom: 4rem;
+        margin-bottom: 5rem;
 
         &:before {
           content: '';

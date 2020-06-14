@@ -3,28 +3,28 @@
     {
       "name": "$TEMPLATE",
       "icon": "<i class=\"fas fa-stack-1x fa-inverse fa-chart-bar\"></i>",
-      "description": "この項目に対する補足説明"
+      "description": "##### この項目に対する補足説明 #####"
     },
 
     {
       "name": "Webサービス群死活監視ダッシュボード",
       "icon": "<i class=\"fas fa-stack-1x fa-inverse fa-chart-bar\"></i>",
-      "description": "各社に提供しているASPサービスの死活監視を行い、障害発生時に Amazon SNS を介して社内関係者へSMSアラートを送信し、その後の事故対応ワークフローを記録します。"
+      "description": "契約各社に提供しているASPサービスの死活監視を行い、障害発生時のワークフローを一元管理する運用向けWebサービスです。"
     },
     {
-      "name": "Wi-Fi Direct を用いたP2P通信を行う実証実験用アプリ",
+      "name": "Wi-Fi Direct を用いたP2P通信の実証実験アプリ",
       "icon": "<i class=\"fas fa-stack-1x fa-inverse fa-wifi\"></i>",
-      "description": "某大学の研究の一環で、インターネット回線が使用できない環境下でバケツリレー型のデータ送受信を行うための実証実験に使われたAndorid用アプリです。"
+      "description": "インターネット回線が使用できない環境下でも複数の端末がバケツリレー型のデータ転送を行えるようにするべく、某大学の研究に使用されたAndorid用アプリです。"
     },
     {
       "name": "Google Cloud Vision を用いた名刺の読取～発注サービス",
       "icon": "<i class=\"fas fa-stack-1x fa-inverse fa-address-card\"></i>",
-      "description": "スマートフォン等で撮影した名刺の画像をアップロードするだけで名刺の輪郭、文字内容を読み取り、読み取った結果を編集して実際の発注まで行える某オーダーメイド型ECサイトのサービスです。"
+      "description": "スマートフォン等で撮影した名刺画像をアップロードするだけで名刺の輪郭検出、文字内容の読み取りまでを自動で行い、実際の発注までをワンストップで行えるようにした某オフィス通販サイトのサービスです。"
     },
     {
       "name": "店舗型会員制サービスの退会予測AIモデル",
       "icon": "<i class=\"fas fa-stack-1x fa-inverse fa-chart-line\"></i>",
-      "description": "店舗型会員制サービスにおける個々の会員の退会を予測するAIです。退会する可能性が高い顧客に早めの対策を打つことにより退会を防ぐためのソリューションの一部として開発されました。"
+      "description": "店舗型会員制サービスにおける個々の会員の退会確率を予測するAIです。退会可能性がより高い顧客に早めの施策を打ち出すことにより、退会を防ぐためのソリューションの一部として開発いたしました。"
     }
   ]
 }
