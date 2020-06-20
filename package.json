@@ -1,9 +1,9 @@
 {
   "license": "UNLICENSED",
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
-    "args-parser": "^1.1.0",
     "autoprefixer": "^9.7.3",
     "babel-loader": "^8.0.6",
     "bootstrap": "^4.4.1",
@@ -42,14 +42,17 @@
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.1"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
   },
   "browserslist": [
     "defaults",
     "not IE 11"
   ],
   "scripts": {
-    "build": "webpack --config webpack.config.js --progress --profile --colors",
+    "dev": "webpack --config webpack.dev.js --progress --profile --colors",
+    "start": "webpack-dev-server --inline --hot --config webpack.watch.js",
+    "build": "webpack --config webpack.prod.js --progress --profile --colors",
     "deploy": "yarn run build && gh-pages -d public/"
   }
 }

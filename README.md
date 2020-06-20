@@ -6,12 +6,16 @@
 
 ## 静的ビルド (開発用)
 
-`$ yarn run webpack`
+`$ yarn run dev`
 
 ## 静的ビルド (本番用)
 
-`$ yarn run webpack --production`
+`$ yarn run build`
 
 ## ローカルサーバー立ち上げ、Watch
 
-`$ yarn run webpack-dev-server`
+`$ yarn run start`
+
+## 本番ビルドして GitHub Pages にデプロイ
+
+`$ yarn run deploy`
