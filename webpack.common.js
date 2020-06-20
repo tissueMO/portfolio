@@ -2,20 +2,11 @@
 const fs = require("fs");
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const AutoPrefixer = require("autoprefixer");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const TerserJSPlugin = require("terser-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin").CleanWebpackPlugin;
 const globule = require("globule");
-const args = require("args-parser")(process.argv);
 
-// 環境名
-const IS_DEVELOP = !("production" in args);
-// ソースマップを生成するかどうか
-const USE_SOURCE_MAP = IS_DEVELOP;
 // ビルド先パス
 const DEST_PATH = path.join(__dirname, "./public");
 
@@ -26,7 +17,7 @@ const getEntriesList = (targetTypes) => {
     const filesMatched = globule.find([`**/*.${srcType}`, `!**/_*.${srcType}`], {cwd: `${__dirname}/src`});
 
     for (const srcName of filesMatched) {
-      const targetName = srcName.replace(new RegExp(`.${srcType}$`, 'i'), `.${targetType}`);
+      const targetName = srcName.replace(new RegExp(`.${srcType}$`, "i"), `.${targetType}`);
       entriesList[targetName] = `${__dirname}/src/${srcName}`;
     }
   }
@@ -54,8 +45,6 @@ for (const jsonFile of dynamicContentsJsonFiles) {
 
 
 const app = {
-  mode: IS_DEVELOP ? "development" : "production",
-  devtool: IS_DEVELOP ? "source-map" : false,
   entry: Object.assign(
     {
       app: [
@@ -69,20 +58,12 @@ const app = {
     filename: "js/[name].min.js",
     publicPath: "/",
   },
-  devServer: {
-    contentBase: DEST_PATH,
-    watchContentBase: true,
-    port: 3000,
-    open: true,
-  },
   module: {
     rules: [
       {
         test: /\.ejs$/,
         use: [
-          {
-            loader: "html-loader",
-          },
+          { loader: "html-loader" },
           {
             loader: "ejs-html-loader",
             options: {
@@ -99,36 +80,27 @@ const app = {
       },
       {
         test: /\.scss$/,
-        use: [{
-          loader: MiniCssExtractPlugin.loader,
-        }, {
-          loader: "css-loader",
-          options: {
-            sourceMap: IS_DEVELOP ? USE_SOURCE_MAP : false,
+        use: [
+          { loader: MiniCssExtractPlugin.loader },
+          { loader: "css-loader" },
+          {
+            loader: "postcss-loader",
+            options: {
+              plugins: [
+                AutoPrefixer(),
+              ],
+            },
           },
-        }, {
-          loader: "postcss-loader",
-          options: {
-            plugins: [
-              AutoPrefixer(),
-            ],
-          },
-        }, {
-          loader: "sass-loader",
-          options: {
-            sourceMap: IS_DEVELOP ? USE_SOURCE_MAP : false,
-          },
-        }],
+          { loader: "sass-loader" },
+        ],
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        enforce: 'pre',
+        enforce: "pre",
         use: [
-          {
-            loader: 'eslint-loader',
-          },
-        ]
+          { loader: "eslint-loader" },
+        ],
       },
     ],
   },
@@ -151,16 +123,6 @@ const app = {
       },
     ),
   ],
-  optimization: {
-    minimizer: [
-      new CleanWebpackPlugin(),
-    ].concat(IS_DEVELOP ? [] : [
-      // 本番モードのみ有効
-      new TerserJSPlugin({}),
-      new OptimizeCSSAssetsPlugin({}),
-      new UglifyJsPlugin(),
-    ])
-  },
   performance: {
     hints: false,
   },
@@ -175,4 +137,7 @@ for (const [targetName, srcName] of Object.entries(getEntriesList({ejs: "html"})
   }));
 }
 
-module.exports = [app];
+module.exports = {
+  DEST_PATH: DEST_PATH,
+  app: app,
+};

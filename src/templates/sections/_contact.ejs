@@ -2,30 +2,39 @@
   <div class="col-lg-12 text-center">
     <h2 class="section-heading text-uppercase">Contact Me</h2>
     <h3 class="section-subheading">
-      採用オファーや開発依頼のご相談等、お待ちしております。
+      <% if (contents.contact.open) { %>
+        採用オファーや開発依頼のご相談等、お待ちしております。
+      <% } else { %>
+        大変恐れ入りますが、只今一切のご連絡をお断り申し上げております。
+      <% } %>
     </h3>
   </div>
 </div>
 <div class="row">
-  <% if (!contents.contact.open) { %>
-  <div class="col-lg-12 text-center">
-    <p>大変恐れ入りますが、只今一切のご連絡をお断り申し上げております。</p>
-  </div>
-  <% } else { %>
   <div class="col-lg-12 text-center">
     <div class="d-inline-flex flex-column align-items-start mx-auto">
-      <% for (const address of contents.contact.addresses) { %>
-      <p class="js-contact-item d-inline-block">
-        <%- address.icon %>
-        <a class="js-address-link" href="<%- address.address %>" target="_blank">
-          <span class="js-address-link-text"><%- address.title %></span><small><i class="material-icons ml-1">open_in_new</i></small>
-        </a>
-        <% if (address.encode) { %>
-        <input type="hidden" class="js-encode" value="true">
+      <% if (contents.contact.open) { %>
+        <% for (const address of contents.contact.addresses) { %>
+          <p class="js-contact-item d-inline-block">
+            <%- address.icon %>
+            <a class="js-address-link" href="<%- address.address %>" target="_blank">
+              <span class="js-address-link-text"><%- address.title %></span><small><i class="material-icons ml-1">open_in_new</i></small>
+            </a>
+            <% if (address.encode) { %>
+              <input type="hidden" class="js-encode" value="true">
+            <% } %>
+          </p>
         <% } %>
-      </p>
       <% } %>
+
+      <!-- リポジトリー -->
+      <p class="js-contact-item d-inline-block">
+        <%- contents.contact.repository.icon %>
+        <a class="js-address-link" href="<%- contents.contact.repository.address %>" target="_blank">
+          <span class="js-address-link-text"><%- contents.contact.repository.title %></span><small><i class="material-icons ml-1">open_in_new</i></small>
+        </a>
+        <input type="hidden" class="js-encode" value="true">
+      </p>
     </div>
   </div>
-  <% } %>
 </div>

@@ -1,123 +1,116 @@
-<%
-let idCounter = 0;
-for (const item of contents.portfolio) {
-  if (item.name === '$TEMPLATE') {
-    continue;
-  }
-  idCounter++;
-%>
+<% let idCounter = 0; %>
+<% for (const item of contents.portfolio) { %>
+  <% if (item.name === '$TEMPLATE') { %>
+    <% continue; %>
+  <% } %>
+  <% idCounter++; %>
 
-<!-- Modal -->
-<div class="modal fade js-portfolio-modal" id="portfolioModal<%- idCounter %>" tabindex="-1" role="dialog"
-  aria-hidden="true">
-  <div class="modal-dialog modal-xl text-center" role="document">
-    <div class="modal-content">
-      <div class="modal-header border-bottom-0 pt-4 pr-4 pb-0">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">
-            <i class="material-icons">close</i>
-          </span>
-        </button>
-      </div>
-      <div class="modal-body px-sm-5 py-sm-4">
-        <h2 class="mb-3"><%= item.name %></h2>
-        <p class="item-intro text-muted mb-5"><%= item.lead %></p>
+  <!-- Modal -->
+  <div class="modal fade js-portfolio-modal" id="portfolioModal<%- idCounter %>"
+    tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-xl text-center" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-bottom-0 pt-4 pr-4 pb-0">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="material-icons">close</i>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body px-sm-5 py-sm-4">
+          <h2 class="mb-3"><%= item.name %></h2>
+          <p class="item-intro text-muted mb-5"><%= item.lead %></p>
 
-        <div class="swiper-wrapper">
-          <div class="swiper-container swiper-container-portfolio swiper-container-portfolio-<%- idCounter %> my-5">
-            <div class="swiper-wrapper">
-              <%
-                let isSingle = true;
-
-                if (typeof item.images === 'string') {
-                  // 単一の画像
-                  if (item.images === '') {
-                    // 画像未設定
-              %>
-              <!--
-              <div class="swiper-slide">
-                <img class="img-fluid d-block mx-auto" src="/img/portfolio/no-image-full.png" alt="<%= item.name %>">
-              </div>
-              -->
-              <%  } else { %>
-              <div class="swiper-slide">
-                <% if (item.images.includes('<iframe')) { %>
-                  <%- item.images %>
-                <% } else { %>
-                <img class="img-fluid d-block mx-auto" src="/img/portfolio/<%- item.images %>" alt="<%= item.name %>">
+          <div class="swiper-wrapper">
+            <div class="swiper-container swiper-container-portfolio swiper-container-portfolio-<%- idCounter %> my-5">
+              <div class="swiper-wrapper">
+                <% let isSingle = true; %>
+                <% if (typeof item.images === 'string') { %>
+                  <!-- 単一の画像 -->
+                  <% if (item.images === '') { %>
+                    <!-- 画像未設定 -->
+                    <!--
+                    <div class="swiper-slide">
+                      <img class="img-fluid d-block mx-auto" src="/img/portfolio/no-image-full.png" alt="<%= item.name %>">
+                    </div>
+                    -->
+                  <%  } else { %>
+                    <div class="swiper-slide">
+                      <% if (item.images.includes('<iframe')) { %>
+                        <%- item.images %>
+                      <% } else { %>
+                        <img class="img-fluid d-block mx-auto" src="/img/portfolio/<%- item.images %>" alt="<%= item.name %>">
+                      <% } %>
+                    </div>
+                  <% } %>
+                <% } else if (Array.isArray(item.images)) { %>
+                  <!-- 複数の画像 -->
+                  <% if (item.images.length > 1) { %>
+                    <% isSingle = false; %>
+                  <% } %>
+                  <% for (const image of item.images) { %>
+                    <% if (typeof image === 'string') { %>
+                      <!-- 画像のファイル名 -->
+                      <% if (image.includes('<iframe')) { %>
+                        <div class="swiper-slide">
+                          <%- image %>
+                        </div>
+                      <% } else { %>
+                        <div class="swiper-slide">
+                          <img class="img-fluid d-block mx-auto" src="/img/portfolio/<%- image %>" alt="<%= item.name %>">
+                        </div>
+                      <% } %>
+                    <% } else { %>
+                      <!-- 画像ファイル名と補足文のセット -->
+                      <div class="swiper-slide">
+                        <img class="img-fluid d-block mx-auto" src="/img/portfolio/<%- image['file'] %>" alt="<%- image['description'] %>">
+                      </div>
+                    <% } %>
+                  <% } %>
                 <% } %>
               </div>
-              <%
-                  }
-                } else if (Array.isArray(item.images)) {
-                  // 複数の画像
-                  if (item.images.length > 1) {
-                    isSingle = false;
-                  }
-                  for (const image of item.images) {
-                    if (typeof image === 'string') {
-                      // 画像のファイル名
-                      if (image.includes('<iframe')) {
-              %>
-              <div class="swiper-slide">
-                <%- image %>
-              </div>
-              <% } else { %>
-              <div class="swiper-slide">
-                <img class="img-fluid d-block mx-auto" src="/img/portfolio/<%- image %>" alt="<%= item.name %>">
-              </div>
-              <%      }
-                    } else {
-                      // 画像ファイル名と補足文のセット
-              %>
-              <div class="swiper-slide">
-                <img class="img-fluid d-block mx-auto" src="/img/portfolio/<%- image['file'] %>"
-                  alt="<%- image['description'] %>">
-              </div>
-              <%
-                    }
-                  }
-                }
-              %>
             </div>
+
+            <% if (!isSingle) { %>
+              <div class="swiper-pagination swiper-pagination-portfolio-<%- idCounter %>"></div>
+            <% } %>
+            <div class="swiper-button-prev swiper-button-prev-portfolio-<%- idCounter %>"></div>
+            <div class="swiper-button-next swiper-button-next-portfolio-<%- idCounter %>"></div>
           </div>
 
-          <% if (!isSingle) { %>
-            <div class="swiper-pagination swiper-pagination-portfolio-<%- idCounter %>"></div>
+          <div class="my-5 text-left"><%- item.description %></div>
+
+          <% if (item.attributes) { %>
+            <table class="table table-borderless col-12 col-lg-8 col-xl-6 mx-auto">
+              <tbody>
+                <% for (const key in item.attributes) { %>
+                  <tr>
+                    <th scope="row" class="text-left text-nowrap">
+                      <%= key %>
+                    </th>
+                    <% if (item.attributes[key].startsWith('http')) { %>
+                      <td>
+                        <a href="<%= item.attributes[key] %>" target="_blank">
+                          こちら
+                          <small><i class="material-icons">open_in_new</i></small>
+                        </a>
+                      </td>
+                    <% } else { %>
+                      <td>
+                        <%- item.attributes[key] %>
+                      </td>
+                    <% } %>
+                  </tr>
+                <% } %>
+              </tbody>
+            </table>
           <% } %>
-          <div class="swiper-button-prev swiper-button-prev-portfolio-<%- idCounter %>"></div>
-          <div class="swiper-button-next swiper-button-next-portfolio-<%- idCounter %>"></div>
         </div>
-
-        <div class="my-5 text-left"><%- item.description %></div>
-
-        <% if (item.attributes) { %>
-        <table class="table table-borderless col-12 col-lg-8 col-xl-6 mx-auto">
-          <tbody>
-            <% for (const key in item.attributes) { %>
-            <tr>
-              <th scope="row" class="text-left text-nowrap"><%= key %></th>
-              <% if (item.attributes[key].startsWith('http')) { %>
-              <td>
-                <a href="<%= item.attributes[key] %>" target="_blank">
-                  こちら
-                  <small><i class="material-icons">open_in_new</i></small>
-                </a>
-              </td>
-              <% } else { %>
-              <td><%- item.attributes[key] %></td>
-              <% } %>
-            </tr>
-            <% } %>
-          </tbody>
-        </table>
-        <% } %>
-      </div>
-      <div class="modal-footer border-top-0 pt-0 pb-4 pr-4">
-        <button class="btn btn-primary px-5" data-dismiss="modal" type="button">閉じる</button>
+        <div class="modal-footer border-top-0 pt-0 pb-4 pr-4">
+          <button class="btn btn-primary px-5" data-dismiss="modal" type="button">閉じる</button>
+        </div>
       </div>
     </div>
-  </div>
-</div><!-- Modal -->
+  </div><!-- Modal -->
 
 <% } %>

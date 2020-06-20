@@ -5,19 +5,17 @@
   </div>
 </div>
 <div class="row text-center">
-  <%
-    for (const item of contents.works) {
-      if (item.name === '$TEMPLATE') {
-        continue;
-      }
-  %>
-  <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-5">
-    <span class="fa-stack fa-4x">
-      <i class="fas fa-circle fa-stack-2x text-primary"></i>
-      <%- item.icon %>
-    </span>
-    <h4 class="service-heading"><%= item.name %></h4>
-    <small class="text-muted"><%= item.description %></small>
-  </div>
+  <% for (const item of contents.works) { %>
+    <% if (item.name === '$TEMPLATE') { %>
+      <% continue; %>
+    <% } %>
+    <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-5">
+      <span class="fa-stack fa-4x">
+        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+        <%- item.icon %>
+      </span>
+      <h4 class="service-heading"><%= item.name %></h4>
+      <small class="text-muted"><%= item.description %></small>
+    </div>
   <% } %>
 </div>

@@ -21,19 +21,21 @@
   <div class="col-12 col-sm-11 col-lg-9 mx-auto">
     <table class="table table-borderless">
       <% for (const list of contents.skills.lists) { %>
-      <tr>
-        <th scope="row" class="text-nowrap"><%= list.title %></th>
-        <td>
-          <% for (const [index, item] of list.values.entries()) { %>
-            <%- item.replace(/, /g, ' &nbsp; ') %>
-            <% if (item.includes('|')) { %>
-              <br>
-            <% } else if (index + 1 < list.values.length) { %>
-              &nbsp;
+        <tr>
+          <th scope="row" class="text-nowrap">
+            <%= list.title %>
+          </th>
+          <td>
+            <% for (const [index, item] of list.values.entries()) { %>
+              <%- item.replace(/, /g, ' &nbsp; ') %>
+              <% if (item.includes('|')) { %>
+                <br>
+              <% } else if (index + 1 < list.values.length) { %>
+                &nbsp;
+              <% } %>
             <% } %>
-          <% } %>
-        </td>
-      </tr>
+          </td>
+        </tr>
       <% } %>
     </table>
   </div>
