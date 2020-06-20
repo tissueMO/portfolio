@@ -11,4 +11,21 @@ module.exports = merge(common.app, {
   plugins: [
     new CleanWebpackPlugin(),
   ],
-})
+  module: {
+    rules: [
+      {
+        test: /\.ejs$/,
+        use: [
+          { loader: "html-loader" },
+          {
+            loader: "ejs-html-loader",
+            options: {
+              // JSON動的コンテンツをEJSにインジェクションする
+              contents: common.dynamicContents,
+            },
+          },
+        ],
+      },
+    ],
+  },
+});

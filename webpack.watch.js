@@ -13,4 +13,21 @@ module.exports = merge(common.app, {
     port: 3000,
     open: true,
   },
+  module: {
+    rules: [
+      {
+        test: /\.ejs$/,
+        use: [
+          { loader: "html-loader" },
+          {
+            loader: "ejs-html-loader",
+            options: {
+              // JSON動的コンテンツをEJSにインジェクションする
+              contents: common.dynamicContents,
+            },
+          },
+        ],
+      },
+    ],
+  },
 })

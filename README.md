@@ -4,6 +4,10 @@
 
 `$ yarn`
 
+## ローカルサーバー立ち上げ・Watch
+
+`$ yarn run start`
+
 ## 静的ビルド (開発用)
 
 `$ yarn run dev`
@@ -12,10 +16,6 @@
 
 `$ yarn run build`
 
-## ローカルサーバー立ち上げ、Watch
-
-`$ yarn run start`
-
-## 本番ビルドして GitHub Pages にデプロイ
+## `public/` 以下を GitHub Pages にデプロイ
 
 `$ yarn run deploy`

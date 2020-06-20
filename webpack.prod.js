@@ -17,4 +17,26 @@ module.exports = merge(common.app, {
     new TerserJSPlugin(),
     new UglifyJsPlugin(),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.ejs$/,
+        use: [
+          {
+            loader: "html-loader",
+            options: {
+              minimize: true,
+            },
+          },
+          {
+            loader: "ejs-html-loader",
+            options: {
+              // JSON動的コンテンツをEJSにインジェクションする
+              contents: common.dynamicContents,
+            },
+          },
+        ],
+      },
+    ],
+  },
 });

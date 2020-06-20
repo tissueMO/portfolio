@@ -56,21 +56,17 @@ const app = {
   output: {
     path: path.resolve(__dirname, DEST_PATH),
     filename: "js/[name].min.js",
-    publicPath: "/",
+    // サブディレクトリー以下に公開できるようにするためにパスの起点を省略する
+    publicPath: "",
   },
   module: {
     rules: [
       {
-        test: /\.ejs$/,
+        test: /\.js$/,
+        exclude: /node_modules/,
+        enforce: "pre",
         use: [
-          { loader: "html-loader" },
-          {
-            loader: "ejs-html-loader",
-            options: {
-              // JSON動的コンテンツをEJSにインジェクションする
-              contents: dynamicContents,
-            },
-          },
+          { loader: "eslint-loader" },
         ],
       },
       {
@@ -95,12 +91,20 @@ const app = {
         ],
       },
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        enforce: "pre",
-        use: [
-          { loader: "eslint-loader" },
-        ],
+        test: /\.(jpe?g|png|gif|svg)$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: (resourcePath, query) => {
+              const basePath = path.join(__dirname, "src/");
+              return resourcePath
+                .substring(basePath.length)
+                .replace(/\\/g, "/");
+            },
+            // "img/[to]/[name].[ext]",
+            esModule: false,
+          },
+        },
       },
     ],
   },
@@ -114,13 +118,11 @@ const app = {
     new CopyWebpackPlugin(
       [
         {
+          context: "src/img",
           from: "**/*",
-          to: "img",
+          to: path.resolve(DEST_PATH, "img"),
         },
       ],
-      {
-        context: "src/img",
-      },
     ),
   ],
   performance: {
@@ -140,4 +142,5 @@ for (const [targetName, srcName] of Object.entries(getEntriesList({ejs: "html"})
 module.exports = {
   DEST_PATH: DEST_PATH,
   app: app,
+  dynamicContents: dynamicContents,
 };
