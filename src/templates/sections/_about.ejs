@@ -16,33 +16,31 @@
   <div class="row">
     <div class="col-lg-12 d-flex justify-content-center">
       <ul class="timeline">
-        <%
-          let flip = true;
-          for (const timeline of contents.career) {
-            flip = !flip;
-        %>
-        <li class="<%= flip ? 'timeline-inverted' : '' %>">
-          <div class="timeline-image">
-            <% if (timeline.image.startsWith('<')) { %>
-              <%- timeline.image %>
-            <% } else { %>
-              <img class="rounded-circle img-fluid" src="/img/career/<%- timeline.image %>" alt="Career">
-            <% } %>
+        <% let flip = true; %>
+        <% for (const timeline of contents.career) { %>
+          <% flip = !flip; %>
+          <li class="<%= flip ? 'timeline-inverted' : '' %>">
+            <div class="timeline-image">
+              <% if (timeline.image.startsWith('<')) { %>
+                <%- timeline.image %>
+              <% } else { %>
+                <img class="rounded-circle img-fluid" src="/img/career/<%- timeline.image %>" alt="Career">
+              <% } %>
+              </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4><%= timeline.date %></h4>
+                <h4 class="subheading"><%= timeline.title %></h4>
+              </div>
+              <div class="timeline-body">
+                <p class="text-muted"><%- timeline.text %></p>
+              </div>
             </div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4><%= timeline.date %></h4>
-              <h4 class="subheading"><%= timeline.title %></h4>
-            </div>
-            <div class="timeline-body">
-              <p class="text-muted"><%- timeline.text %></p>
-            </div>
-          </div>
-        </li>
-        <%
-          }
-          flip = !flip;
-        %>
+          </li>
+        <% } %>
+
+        <% flip = !flip; %>
+
         <li class="<%= flip ? 'timeline-inverted' : '' %>">
           <div class="timeline-image">
             <img class="rounded-circle img-fluid" src="/img/career/career-e.png" alt="Career">
