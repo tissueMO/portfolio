@@ -14,7 +14,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-12 d-flex justify-content-center">
+    <div class="col-lg-12 ml-3 ml-md-0 d-flex justify-content-center">
       <ul class="timeline">
         <% let flip = true; %>
         <% for (const timeline of contents.career) { %>
@@ -67,7 +67,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-12">
+    <div class="col-10 col-lg-12 mx-auto">
       <% for (const text of contents.beliefs) { %>
         <% if (typeof text === 'string') { %>
           <h4><%- text %></h4>
@@ -91,7 +91,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-12 d-flex justify-content-center">
+    <div class="col-10 col-lg-12 mx-auto d-flex justify-content-center">
       <ul class="about-list">
         <% for (const text of contents.strength) { %>
           <li class="h5 my-3"><%- text %></li>
@@ -109,7 +109,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-12 d-flex justify-content-center">
+    <div class="col-10 col-lg-12 mx-auto d-flex justify-content-center">
       <ul class="about-list">
         <% for (const text of contents.weakness) { %>
           <li class="h5 my-3"><%- text %></li>
@@ -127,7 +127,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-12 d-flex justify-content-center">
+    <div class="col-10 col-lg-12 mx-auto d-flex justify-content-center">
       <ul class="about-list">
         <% for (const text of contents.wannatry) { %>
           <li class="h5 my-3"><%- text %></li>
