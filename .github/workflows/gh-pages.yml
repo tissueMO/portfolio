@@ -40,8 +40,8 @@ jobs:
       - name: Upload result for next job
         uses: actions/upload-artifact@v1
         with:
-          name: public
-          path: public
+          name: portfolio
+          path: .
 
   deploy:
     # ビルドした静的コンテンツを GitHub Pages にデプロイする
@@ -52,7 +52,7 @@ jobs:
       - name: Download result from previous job
         uses: actions/download-artifact@v1
         with:
-          name: public
+          name: portfolio
 
       - name: Push to gh-pages branch and Deploy to GitHub Pages
         run: yarn run deploy
