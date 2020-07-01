@@ -40,8 +40,8 @@ jobs:
       - name: Upload result for next job
         uses: actions/upload-artifact@v1
         with:
-          name: portfolio
-          path: .
+          name: public
+          path: public
 
   deploy:
     # ビルドした静的コンテンツを GitHub Pages にデプロイする
@@ -49,10 +49,29 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - uses: actions/cache@v1
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.cache/yarn
+          key: ${{ runner.os }}-portfolio-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+          restore-keys:
+            ${{ runner.os }}-portfolio-
+
+      - name: Install dependencies
+        run: yarn
+        if: steps.cache.outputs.cache-hit != 'true'
+
       - name: Download result from previous job
         uses: actions/download-artifact@v1
         with:
-          name: portfolio
+          name: public
 
       - name: Push to gh-pages branch and Deploy to GitHub Pages
         run: yarn run deploy
