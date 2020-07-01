@@ -2693,12 +2693,12 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-ejs-html-loader@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/ejs-html-loader/-/ejs-html-loader-4.0.1.tgz#d1fc8ff0acb0cdc16347764c02bd5e84672a40eb"
-  integrity sha512-aBrpuqLQaDy76Yo/nT9+OOx4xJLOrQSFjTwpb/gKR/q1VQKMq22M36mYGTy4qeCGG9ofFWsXmyDoP/cqMWX4CA==
+ejs-html-loader@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/ejs-html-loader/-/ejs-html-loader-3.0.1.tgz#0e20d968707b13d8dc250a31f9c9990f26921519"
+  integrity sha1-DiDZaHB7E9jcJQox+cmZDyaSFRk=
   dependencies:
-    loader-utils "^1.2.3"
+    loader-utils "^1.1.0"
 
 ejs-render-loader@^1.0.0:
   version "1.0.0"
