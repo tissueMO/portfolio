@@ -26,9 +26,9 @@ jobs:
           cache-name: cache-node-modules
         with:
           path: ~/.cache/yarn
-          key: ${{ runner.os }}-portfolio-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+          key: ${{ runner.os }}-${{ github.repository }}-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
           restore-keys:
-            ${{ runner.os }}-portfolio-
+            ${{ runner.os }}-${{ github.repository }}-
 
       - name: Install dependencies
         run: yarn
@@ -60,9 +60,9 @@ jobs:
           cache-name: cache-node-modules
         with:
           path: ~/.cache/yarn
-          key: ${{ runner.os }}-portfolio-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+          key: ${{ runner.os }}-${{ github.repository }}-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
           restore-keys:
-            ${{ runner.os }}-portfolio-
+            ${{ runner.os }}-${{ github.repository }}-
 
       - name: Install dependencies
         run: yarn
@@ -74,4 +74,4 @@ jobs:
           name: public
 
       - name: Push to gh-pages branch and Deploy to GitHub Pages
-        run: yarn run deploy
+        run: yarn run deploy -u ${{ secrets.USER_NAME }}
