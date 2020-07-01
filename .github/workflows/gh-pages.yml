@@ -74,4 +74,4 @@ jobs:
           name: public
 
       - name: Push to gh-pages branch and Deploy to GitHub Pages
-        run: yarn run deploy -u ${{ secrets.USER_NAME }}
+        run: yarn run deploy -u "${{ secrets.USER_NAME }}"
