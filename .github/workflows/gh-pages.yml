@@ -21,8 +21,18 @@ jobs:
         with:
           node-version: '12.x'
 
+      - uses: actions/cache@v1
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.cache/yarn
+          key: ${{ runner.os }}-portfolio-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+          restore-keys:
+            ${{ runner.os }}-portfolio-
+
       - name: Install dependencies
         run: yarn
+        if: steps.cache.outputs.cache-hit != 'true'
 
       - name: Build for production
         run: yarn run build
