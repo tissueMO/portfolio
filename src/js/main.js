@@ -3,7 +3,7 @@
 // ###################################################################
 const Chart = require('../../node_modules/chart.js/dist/Chart');
 require('../../node_modules/jquery/dist/jquery');
-require('../../node_modules/swiper/js/swiper');
+require('../../node_modules/swiper/swiper-bundle');
 require('../../node_modules/js-base64/base64');
 require('../../node_modules/google-palette/palette');
 require('../../node_modules/bootstrap/dist/js/bootstrap');

@@ -31,7 +31,9 @@
                     <!-- 画像未設定 -->
                     <!--
                     <div class="swiper-slide">
-                      <img class="img-fluid d-block mx-auto" src="img/portfolio/no-image-full.png" alt="<%= item.name %>">
+                      <img class="img-fluid d-block mx-auto swiper-lazy"
+                        data-src="img/portfolio/no-image-full.png" alt>
+                      <div class="swiper-lazy-preloader"></div>
                     </div>
                     -->
                   <%  } else { %>
@@ -39,7 +41,9 @@
                       <% if (item.images.includes('<iframe')) { %>
                         <%- item.images %>
                       <% } else { %>
-                        <img class="img-fluid d-block mx-auto" src="img/portfolio/<%- item.images %>" alt="<%= item.name %>">
+                        <img class="img-fluid d-block mx-auto swiper-lazy"
+                          data-src="img/portfolio/<%- item.images %>" alt>
+                        <div class="swiper-lazy-preloader"></div>
                       <% } %>
                     </div>
                   <% } %>
@@ -57,13 +61,17 @@
                         </div>
                       <% } else { %>
                         <div class="swiper-slide">
-                          <img class="img-fluid d-block mx-auto" src="img/portfolio/<%- image %>" alt="<%= item.name %>">
+                          <img class="img-fluid d-block mx-auto swiper-lazy"
+                            data-src="img/portfolio/<%- image %>" alt>
+                          <div class="swiper-lazy-preloader"></div>
                         </div>
                       <% } %>
                     <% } else { %>
                       <!-- 画像ファイル名と補足文のセット -->
                       <div class="swiper-slide">
-                        <img class="img-fluid d-block mx-auto" src="img/portfolio/<%- image['file'] %>" alt="<%- image['description'] %>">
+                        <img class="img-fluid d-block mx-auto swiper-lazy"
+                          data-src="img/portfolio/<%- image['file'] %>" alt="<%- image['description'] %>">
+                        <div class="swiper-lazy-preloader"></div>
                       </div>
                     <% } %>
                   <% } %>

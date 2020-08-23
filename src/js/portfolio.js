@@ -2,9 +2,24 @@
 //    Portfolio
 // ###################################################################
 const $ = require('../../node_modules/jquery/dist/jquery');
-const Swiper = require('../../node_modules/swiper/js/swiper');
+const Swiper = require('../../node_modules/swiper/swiper-bundle');
 
 $(() => {
+  // 遅延ロード時の画像表示対策
+  $('.js-portfolio-modal').on('error', () => {
+    // this.src = '';
+  });
+
+  // スライダーの画像数が1枚しかない場合はページャーを非表示にする
+  $('.js-portfolio-modal').on('show.bs.modal', e => {
+    const $this = $('.swiper-container', e.currentTarget);
+    const $imageElements = $('img', $this);
+    if ($imageElements.length === 1) {
+      $('.swiper-button-prev, .swiper-button-next', e.currentTarget).remove();
+    }
+  });
+
+  // スライダー初期化
   $('.js-portfolio-modal').on('shown.bs.modal', e => {
     const $this = $('.swiper-container', e.currentTarget);
     const index = $('.swiper-container').index($this);
@@ -21,7 +36,13 @@ $(() => {
       Object.assign(
         {
           slidesPerView: 1,
-          autoHeight: true
+          autoHeight: true,
+          preloadImages: false,
+          lazy: {
+            loadPrevNext: true,
+            loadPrevNextAmount: 2,
+            loadOnTransitionStart: true
+          }
         },
         ($('.swiper-slide', $this).length <= 1) ? {} : {
           loop: true,

@@ -58,6 +58,18 @@
       .swiper-container {
         width: calc(100% - 100px);
         box-sizing: content-box;
+
+        img {
+          transition: all 0.5s;
+          opacity: 0;
+
+          &.swiper-lazy-loading {
+            min-height: 100px;
+          }
+          &.swiper-lazy-loaded {
+            opacity: 1;
+          }
+        }
       }
 
       .swiper-pagination {
