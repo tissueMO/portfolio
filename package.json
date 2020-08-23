@@ -39,7 +39,7 @@
     "sass-loader": "^8.0.1",
     "startbootstrap-agency": "^5.2.2",
     "style-loader": "^1.1.2",
-    "swiper": "^5.3.6",
+    "swiper": "6",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
