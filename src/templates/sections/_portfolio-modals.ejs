@@ -32,7 +32,7 @@
                     <!--
                     <div class="swiper-slide">
                       <img class="img-fluid d-block mx-auto swiper-lazy"
-                        data-src="img/portfolio/no-image-full.png" alt>
+                        data-src="img/portfolio/no-image-full.png" alt="<%= item.name %>">
                       <div class="swiper-lazy-preloader"></div>
                     </div>
                     -->
@@ -42,7 +42,7 @@
                         <%- item.images %>
                       <% } else { %>
                         <img class="img-fluid d-block mx-auto swiper-lazy"
-                          data-src="img/portfolio/<%- item.images %>" alt>
+                          data-src="img/portfolio/<%- item.images %>" alt="<%= item.name %>">
                         <div class="swiper-lazy-preloader"></div>
                       <% } %>
                     </div>
@@ -62,7 +62,7 @@
                       <% } else { %>
                         <div class="swiper-slide">
                           <img class="img-fluid d-block mx-auto swiper-lazy"
-                            data-src="img/portfolio/<%- image %>" alt>
+                            data-src="img/portfolio/<%- image %>" alt="<%= item.name %>">
                           <div class="swiper-lazy-preloader"></div>
                         </div>
                       <% } %>
