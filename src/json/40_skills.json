@@ -12,7 +12,7 @@
           "datasets": [
             {
               "data": [
-                40, 75, 70, 80,
+                40, 80, 70, 80,
                 65, 95, 60, 60, 30
               ],
               "backgroundColor": "rgba(255, 127, 127, 0.3)",
@@ -28,15 +28,15 @@
         "data": {
           "labels": [
             "C#", "Java", "Python", "Node.js",
-            "C++", "VB.NET", "HTML5/CSS3",
+            "PHP", "C++", "VB.NET", "HTML5/CSS3",
             "R", "Bash", "PowerShell"
           ],
           "datasets": [
             {
               "data": [
                 90, 80, 80, 70,
-                60, 60, 70,
-                50, 40, 20
+                50, 60, 60, 70,
+                50, 60, 20
               ],
               "backgroundColor": "rgba(127, 255, 127, 0.3)",
               "borderColor": "rgb(80, 255, 80)",
@@ -71,42 +71,46 @@
       {
         "title": "保有資格",
         "values": [
-          "ITパスポート"
+          "ITパスポート",
+          "Microsoft認定プログラム 70-483 (Programming in C#)"
         ]
       },
       {
         "title": "習得言語",
         "values": [
           "C#",
-          "Visual Basic .NET",
           "Java",
           "Python",
           "Node.js",
+          "PHP",
           "HTML5",
           "CSS3",
           "C++",
+          "Visual Basic .NET",
           "R"
         ]
       },
       {
         "title": "フレームワーク・ライブラリ",
         "values": [
-          "C++ | Win32",
           "C# | WinForms",
           "Java | Spring Boot, Thymeleaf, Struts2, FreeMarker",
-          "Python | Flask, Django, Jinja2, TensorFlow, Keras, NumPy, Pandas",
-          "Node.js | Webpack, Gulp, Babel, Scss, Bootstrap"
+          "Python | Flask, Django, TensorFlow, NumPy, Pandas",
+          "PHP | CakePHP",
+          "Node.js | Vue.js, Webpack, Gulp, Babel, Sass, Bootstrap",
+          "C++ | Win32"
         ]
       },
       {
         "title": "開発環境",
         "values": [
-          "C++ | Visual Studio",
           "C# | Visual Studio, Unity",
           "Java | Eclipse",
           "Python | VSCode",
+          "PHP | PHPStorm",
           "Node.js | VSCode",
-          "R | RStudio"
+          "R | RStudio",
+          "C++ | Visual Studio"
         ]
       },
       {
@@ -121,7 +125,7 @@
         "title": "パブリッククラウド",
         "values": [
           "GCP | Compute Engine, App Engine, Functions, Run, Stackdriver, Vision, Storage, Container Registry",
-          "AWS | EC2, S3, RDS, Lightsail, ECR, ECS, SageMaker"
+          "AWS | IAM, VPC, EC2, ECS/Fargate, Lambda, S3, EFS, RDS/Aurora, ELB, Route53, CloudFront, API Gateway, SQS, SNS, Step Functions, CloudWatch, CloudFormation, Systems Manager, Glue, Athena, CodePipeline, SageMaker"
         ]
       },
       {
