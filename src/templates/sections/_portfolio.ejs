@@ -5,13 +5,15 @@
   </div>
 </div>
 <div class="row">
+  <% const SHOW_MORE_COUNT = 4; %>
   <% let idCounter = 0; %>
   <% for (const item of contents.portfolio) { %>
     <% if (item.name === '$TEMPLATE') { %>
       <% continue; %>
     <% } %>
     <% idCounter++; %>
-    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 d-flex flex-column portfolio-item">
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 d-flex flex-column portfolio-item
+      <%= (idCounter > SHOW_MORE_COUNT) ? 'portfolio-item-showmore js-portfolio-item-showmore' : '' %>">
       <a class="portfolio-link" data-toggle="modal" href="#portfolioModal<%- idCounter %>">
         <div class="portfolio-hover">
           <div class="portfolio-hover-content">詳しく見る</div>
@@ -28,4 +30,10 @@
       </div>
     </div>
   <% } %>
+</div>
+
+<div class="row">
+  <div class="col-12 d-inline-flex d-sm-none justify-content-center">
+    <a href="#" class="btn btn-primary d-inline-block px-5 portfolio-showmore-button js-portfolio-showmore">もっと見る</a>
+  </div>
 </div>

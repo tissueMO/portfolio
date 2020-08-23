@@ -39,4 +39,12 @@ $(() => {
     ));
     $this.data('swiper').updateAutoHeight(100);
   });
+
+  // もっと見るボタン
+  $('.js-portfolio-showmore').on('click', e => {
+    const $this = $(e.currentTarget);
+    $this.remove();
+    $('.js-portfolio-item-showmore').removeClass('portfolio-item-showmore');
+    return false;
+  });
 });
