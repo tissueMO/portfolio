@@ -59,11 +59,11 @@
       "thumbnail": "rpgdev-next-thumb.jpg",
       "images": [
         "rpgdev-next-1.jpg",
-        "rpgdev-next-2.png",
-        "rpgdev-next-3.png",
-        "rpgdev-next-4.png",
-        "rpgdev-next-5.png",
-        "rpgdev-next-6.png"
+        "rpgdev-next-2.jpg",
+        "rpgdev-next-3.jpg",
+        "rpgdev-next-4.jpg",
+        "rpgdev-next-5.jpg",
+        "rpgdev-next-6.jpg"
       ],
       "lead": "2D-RPG 統合オーサリングソフト",
       "description": "「RPG◯クール」や「W◯LF RPGエディター」のようなオリジナルRPGを製作するためのソフトウェアと、それによって作られたゲームが動作するゲームエンジンです。<br>一般的なRPGの開発に必要な機能を最低限持たせたゲームプログラムをベースに、組み込み用のスクリプト「Squirrel」を使って拡張していくことで大幅な工数削減を図ることができます。<br>上記2つの類似ソフトには無かった「プレーンテキストによるファイル管理」を行うことにより、Git等のバージョン管理ツールを用いたチーム開発も実現可能です。",
@@ -77,11 +77,11 @@
     {
       "name": "賞味期限管理ソリューション",
       "tag": "IoT アプリケーション",
-      "thumbnail": "expiration-date-manager-thumb.png",
+      "thumbnail": "expiration-date-manager-thumb.jpg",
       "images": [
-        "expiration-date-manager-1.png",
-        "expiration-date-manager-2.png",
-        "expiration-date-manager-3.png"
+        "expiration-date-manager-1.jpg",
+        "expiration-date-manager-2.jpg",
+        "expiration-date-manager-3.jpg"
       ],
       "lead": "食料品の賞味期限・消費期限を管理して通知まで行うソリューション",
       "description": "専用のカメラを使ってスキャンするだけで食料品の賞味期限・消費期限の日付を読み取り、その期限日が近づくとSlackに通知してくれる一連の仕組みを構築しました。<br>Slackのワークスペース上に買い物リスト用のチャンネルを用意することで、期限が迫ってきた際にそのチャンネルへ投稿する機能も搭載しています。",
@@ -95,9 +95,10 @@
     {
       "name": "トイレ在室監視ソリューション",
       "tag": "IoT ソリューション",
-      "thumbnail": "door-watcher-thumb.png",
+      "thumbnail": "door-watcher-thumb.jpg",
       "images": [
-        "door-watcher-full.png"
+        "door-watcher-full-1.jpg",
+        "door-watcher-full-2.jpg"
       ],
       "lead": "トイレのドアの開閉状況を監視して在室監視を行うソリューション",
       "description": "スマートフォン等から個室トイレが使用中であるかどうかをリアルタイムで確認できるようにする一連の仕組みを構築しました。<br>リードスイッチには Wi-Fi モジュール内蔵の ESPr Door Sensor を採用し、空室時にドアが開くタイプの個室トイレに設置できるようにしました。",
@@ -111,10 +112,10 @@
     {
       "name": "もぐRing",
       "tag": "ゲームソフト (チーム製作)",
-      "thumbnail": "digdig-mole-girl-thumb.png",
+      "thumbnail": "digdig-mole-girl-thumb.jpg",
       "images": [
-        "digdig-mole-girl-thumb.png",
-        "digdig-mole-girl-full.png"
+        "digdig-mole-girl-thumb.jpg",
+        "digdig-mole-girl-full.jpg"
       ],
       "lead": "Global Game Jam 2020 参加実績",
       "description": "穴掘りモグラ(美少女)が壊れてしまったお家を建て直すべく地中に埋まった木材を集める対戦ゲーム",
@@ -131,8 +132,8 @@
     {
       "name": "小樽商科大学 創作活動部 Webサイト",
       "tag": "Webサイト (WordPress テーマ)",
-      "thumbnail": "soukatsu-ouc-thumb.png",
-      "images": "soukatsu-ouc-full-1.png",
+      "thumbnail": "soukatsu-ouc-thumb.jpg",
+      "images": "soukatsu-ouc-full.jpg",
       "lead": "WordPress 自作テーマ",
       "description": "大学時代に創立した創作活動サークルにおける公式サイトの更新作業を引き継ぎやすくするべく、CMS (WordPress) を導入して丸ごと移行したものです。<br>移行当初は節約も兼ねて自宅のサーバー上で運用していましたが、2019年よりさくらのレンタルサーバに移行し、運用の労力を大幅にカットしました。",
       "attributes": {
@@ -148,16 +149,16 @@
     {
       "name": "鳥人コンテスト",
       "tag": "ゲームソフト (チーム製作)",
-      "thumbnail": "birdcontest-thumb.png",
+      "thumbnail": "birdcontest-thumb.jpg",
       "images": [
         "<div class=\"embed-responsive embed-responsive-16by9\"><iframe class=\"embed-responsive-item\" src=\"https://www.youtube.com/embed/4LuvmbGfFSs\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe></div>",
-        "birdcontest-full-1.png",
-        "birdcontest-full-2.png",
-        "birdcontest-full-3.png",
-        "birdcontest-full-4.png",
-        "birdcontest-full-5.png",
-        "birdcontest-full-6.png",
-        "birdcontest-full-7.png"
+        "birdcontest-full-1.jpg",
+        "birdcontest-full-2.jpg",
+        "birdcontest-full-3.jpg",
+        "birdcontest-full-4.jpg",
+        "birdcontest-full-5.jpg",
+        "birdcontest-full-6.jpg",
+        "birdcontest-full-7.jpg"
       ],
       "lead": "2018年度北海道大学楡陵祭 出展作品",
       "description": "<h4>製作の背景</h4><p>札幌ゲーム制作者コミュニティ「Kawaz」学生部さんとの合同企画です。<br>「3人のプレイヤーが全く別のミニゲームをこなして、その結果を合体させたらどうなる！？」というドキドキ感をコンセプトに、展示専用のゲームとして開発しました。<br>スクリーン上の画面で各プレイヤーのプレイ実況を行いつつ、ギャラリーが飛行結果をスマホから投票できる仕組みも盛り込みました。  <h4>ゲームのあらすじ</h4><p>キミたち3人は「鳥人コンテスト」に出場するチームメイトだ。<br>一人は助走をつけ、一人は飛行機のペダルを漕ぎ、一人はそれをサポートする。<br>それぞれがめちゃくちゃに動いて、人力飛行機で遠くを目指せ！</p>",
