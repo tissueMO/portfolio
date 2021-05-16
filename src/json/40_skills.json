@@ -6,14 +6,28 @@
         "type": "radar",
         "data": {
           "labels": [
-            "要件定義", "アーキテクチャ", "外部設計", "詳細設計",
-            "画面デザイン", "製造", "試験", "保守", "運用"
+            "要件定義",
+            "アーキテクチャ",
+            "外部設計",
+            "詳細設計",
+            "画面デザイン",
+            "製造",
+            "試験",
+            "保守",
+            "運用"
           ],
           "datasets": [
             {
               "data": [
-                40, 80, 70, 80,
-                65, 95, 60, 60, 30
+                40,
+                90,
+                80,
+                80,
+                65,
+                95,
+                65,
+                60,
+                40
               ],
               "backgroundColor": "rgba(255, 127, 127, 0.3)",
               "borderColor": "rgb(255, 80, 80)",
@@ -27,16 +41,32 @@
         "type": "radar",
         "data": {
           "labels": [
-            "C#", "Java", "Python", "Node.js",
-            "PHP", "C++", "VB.NET", "HTML5/CSS3",
-            "R", "Bash", "PowerShell"
+            "C#",
+            "Java",
+            "Python",
+            "JavaScript",
+            "PHP",
+            "C++",
+            "VB.NET",
+            "HTML5/CSS3",
+            "R",
+            "Bash",
+            "PowerShell"
           ],
           "datasets": [
             {
               "data": [
-                90, 80, 80, 70,
-                50, 60, 60, 70,
-                50, 60, 20
+                90,
+                80,
+                80,
+                70,
+                50,
+                60,
+                60,
+                70,
+                50,
+                60,
+                20
               ],
               "backgroundColor": "rgba(127, 255, 127, 0.3)",
               "borderColor": "rgb(80, 255, 80)",
@@ -50,14 +80,24 @@
         "type": "radar",
         "data": {
           "labels": [
-            "Windows", "ASP.NET", "Mac", "iOS",
-            "Android", "Frontend", "Linux"
+            "Windows",
+            "ASP.NET",
+            "Mac",
+            "iOS",
+            "Android",
+            "Frontend",
+            "Linux"
           ],
           "datasets": [
             {
               "data": [
-                70, 0, 0, 0,
-                15, 70, 80
+                70,
+                0,
+                0,
+                0,
+                15,
+                70,
+                80
               ],
               "backgroundColor": "rgba(127, 127, 255, 0.3)",
               "borderColor": "rgb(80, 80, 255)",
@@ -71,51 +111,161 @@
       {
         "title": "保有資格",
         "values": [
-          "AWS認定 ソリューションアーキテクト アソシエイト",
-          "Microsoft認定プログラム Programming in C#",
-          "ITパスポート"
+          {
+            "title": "AWS認定",
+            "badges": [
+              "5e42ff3d-252c-4b5f-83da-d01c98120bfc",
+              "b21848c8-05f4-4c1d-a14a-d81c121d2d61"
+            ]
+          },
+          {
+            "title": "Microsoft認定プログラム",
+            "badges": [
+              "0d87c0e5-ffdc-4ed3-82a5-fd81c97c292a"
+            ]
+          },
+          {
+            "title": "情報処理技術者試験",
+            "values": [
+              "ITパスポート"
+            ]
+          }
         ]
       },
       {
         "title": "習得言語",
         "values": [
-          "C#",
-          "Java",
-          "Python",
-          "Node.js",
-          "PHP",
-          "HTML5",
-          "CSS3",
-          "C++",
-          "Visual Basic .NET",
-          "R"
+          {
+            "title": "プログラミング言語",
+            "values": [
+              "C#",
+              "Java",
+              "Python",
+              "PHP",
+              "JavaScript",
+              "Visual Basic .NET",
+              "C++",
+              "R"
+            ]
+          },
+          {
+            "title": "その他",
+            "values": [
+              "SQL",
+              "HTML",
+              "CSS"
+            ]
+          }
         ]
       },
       {
         "title": "フレームワーク・ライブラリ",
         "values": [
-          "C# | WinForms",
-          "Java | Spring Boot, Thymeleaf, Struts2, FreeMarker",
-          "Python | Flask, Django, TensorFlow, NumPy, Pandas",
-          "PHP | CakePHP",
-          "Node.js | Vue.js, Webpack, Gulp, Babel, Sass, Bootstrap",
-          "C++ | Win32"
+          {
+            "title": "C#",
+            "values": [
+              "WinForms"
+            ]
+          },
+          {
+            "title": "Java",
+            "values": [
+              "Spring Boot",
+              "Thymeleaf",
+              "Struts2",
+              "FreeMarker"
+            ]
+          },
+          {
+            "title": "Python",
+            "values": [
+              "Flask",
+              "Django",
+              "TensorFlow",
+              "NumPy",
+              "Pandas"
+            ]
+          },
+          {
+            "title": "PHP",
+            "values": [
+              "CakePHP",
+              "Laravel"
+            ]
+          },
+          {
+            "title": "JavaScript",
+            "values": [
+              "Vue.js",
+              "Webpack",
+              "Gulp",
+              "Babel",
+              "Sass",
+              "Bootstrap"
+            ]
+          },
+          {
+            "title": "C/C++",
+            "values": [
+              "STL",
+              "Windows API",
+              "MFC",
+              "DXLib"
+            ]
+          }
         ]
       },
       {
         "title": "開発環境",
         "values": [
-          "C# | Visual Studio, Unity",
-          "Java | Eclipse",
-          "Python | VSCode",
-          "PHP | PHPStorm",
-          "Node.js | VSCode",
-          "R | RStudio",
-          "C++ | Visual Studio"
+          {
+            "title": "C#",
+            "values": [
+              "Visual Studio",
+              "Unity"
+            ]
+          },
+          {
+            "title": "Java",
+            "values": [
+              "Eclipse",
+              "Android Studio"
+            ]
+          },
+          {
+            "title": "Python",
+            "values": [
+              "VSCode"
+            ]
+          },
+          {
+            "title": "PHP",
+            "values": [
+              "PhpStorm"
+            ]
+          },
+          {
+            "title": "JavaScript",
+            "values": [
+              "VSCode"
+            ]
+          },
+          {
+            "title": "R",
+            "values": [
+              "RStudio"
+            ]
+          },
+          {
+            "title": "C++",
+            "values": [
+              "Visual Studio"
+            ]
+          }
         ]
       },
       {
-        "title": "DBMS",
+        "title": "リレーショナルデータベース",
         "values": [
           "SQLite",
           "MySQL",
@@ -123,27 +273,72 @@
         ]
       },
       {
+        "title": "NoSQL データベース",
+        "values": [
+          "MongoDB"
+        ]
+      },
+      {
         "title": "パブリッククラウド",
         "values": [
-          "GCP | Compute Engine, App Engine, Functions, Run, Stackdriver, Vision, Storage, Container Registry",
-          "AWS | IAM, VPC, EC2, ECS/Fargate, Lambda, S3, EFS, RDS/Aurora, ELB, Route53, CloudFront, API Gateway, SQS, SNS, Step Functions, CloudWatch, CloudFormation, Systems Manager, Glue, Athena, CodePipeline, SageMaker"
+          {
+            "title": "AWS",
+            "values": [
+              "IAM",
+              "VPC",
+              "EC2/AutoScaling",
+              "ECS/Fargate",
+              "Lambda",
+              "S3",
+              "EFS",
+              "RDS/Aurora",
+              "ELB",
+              "Route53",
+              "CloudFront",
+              "API Gateway",
+              "SQS",
+              "SNS",
+              "Step Functions",
+              "CloudWatch",
+              "CloudFormation",
+              "Systems Manager",
+              "Glue",
+              "Athena",
+              "CodePipeline",
+              "SageMaker"
+            ]
+          },
+          {
+            "title": "GCP",
+            "values": [
+              "Compute Engine",
+              "App Engine",
+              "Functions",
+              "Run",
+              "Stackdriver",
+              "Vision",
+              "Storage",
+              "Container Registry"
+            ]
+          }
         ]
       },
       {
         "title": "プラットフォーム",
         "values": [
-          "Linux | CentOS, Ubuntu",
+          "Linux (CentOS/Ubuntu)",
           "Windows 10",
           "Android"
         ]
       },
       {
-        "title": "周辺ツール",
+        "title": "周辺ツール等",
         "values": [
-          "Git",
-          "Subversion",
           "Docker",
-          "VMware ESXi"
+          "VMware",
+          "WSL2",
+          "Git",
+          "Subversion"
         ]
       }
     ]
