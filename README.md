@@ -1,5 +1,7 @@
 # 対外向けポートフォリオページ
 
+[![GitHub Pages](https://github.com/tissueMO/portfolio/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/tissueMO/portfolio/actions/workflows/gh-pages.yml)
+
 ## 環境構築
 
 `$ yarn`
