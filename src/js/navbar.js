@@ -7,7 +7,7 @@ $(() => {
   // ナビゲーションバーのスクロールスパイ
   $('body').scrollspy({
     target: '#main-nav',
-    offset: $('#main-nav').height() + 2
+    offset: $('#main-nav').height() + 10
   });
   $('.js-scroll-trigger').click(() => {
     $('.navbar-collapse').collapse('hide');
