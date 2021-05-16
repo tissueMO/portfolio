@@ -1,14 +1,14 @@
 // 各種プラグインのロード
-const fs = require("fs");
-const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const AutoPrefixer = require("autoprefixer");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const globule = require("globule");
+const fs = require('fs');
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const AutoPrefixer = require('autoprefixer');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const globule = require('globule');
 
 // ビルド先パス
-const DEST_PATH = path.join(__dirname, "./public");
+const DEST_PATH = path.join(__dirname, './public');
 
 // EJSのファイル変換ルール
 const getEntriesList = (targetTypes) => {
@@ -17,7 +17,7 @@ const getEntriesList = (targetTypes) => {
     const filesMatched = globule.find([`**/*.${srcType}`, `!**/_*.${srcType}`], {cwd: `${__dirname}/src`});
 
     for (const srcName of filesMatched) {
-      const targetName = srcName.replace(new RegExp(`.${srcType}$`, "i"), `.${targetType}`);
+      const targetName = srcName.replace(new RegExp(`.${srcType}$`, 'i'), `.${targetType}`);
       entriesList[targetName] = `${__dirname}/src/${srcName}`;
     }
   }
@@ -38,7 +38,7 @@ const getDynamicContentsJsonFiles = () => {
 const dynamicContentsJsonFiles = getDynamicContentsJsonFiles();
 let dynamicContents = {};
 for (const jsonFile of dynamicContentsJsonFiles) {
-  const jsonText = fs.readFileSync(jsonFile, "utf-8");
+  const jsonText = fs.readFileSync(jsonFile, 'utf-8');
   const json = JSON.parse(jsonText);
   Object.assign(dynamicContents, json);
 }
@@ -48,60 +48,60 @@ const app = {
   entry: Object.assign(
     {
       app: [
-        "./src/js/main.js",
-        "./src/scss/style.scss",
+        './src/js/main.js',
+        './src/scss/style.scss',
       ],
     },
   ),
   output: {
     path: path.resolve(__dirname, DEST_PATH),
-    filename: "js/[name].min.js",
+    filename: 'js/[name].min.js',
     // サブディレクトリー以下に公開できるようにするためにパスの起点を省略する
-    publicPath: "",
+    publicPath: '',
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        enforce: "pre",
+        enforce: 'pre',
         use: [
-          { loader: "eslint-loader" },
+          { loader: 'eslint-loader' },
         ],
       },
       {
         test: /\.js?$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
       },
       {
         test: /\.scss$/,
         use: [
           { loader: MiniCssExtractPlugin.loader },
-          { loader: "css-loader" },
+          { loader: 'css-loader' },
           {
-            loader: "postcss-loader",
+            loader: 'postcss-loader',
             options: {
               plugins: [
                 AutoPrefixer(),
               ],
             },
           },
-          { loader: "sass-loader" },
+          { loader: 'sass-loader' },
         ],
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/,
         use: {
-          loader: "file-loader",
+          loader: 'file-loader',
           options: {
             name: (resourcePath, query) => {
-              const basePath = path.join(__dirname, "src/");
+              const basePath = path.join(__dirname, 'src/');
               return resourcePath
                 .substring(basePath.length)
-                .replace(/\\/g, "/");
+                .replace(/\\/g, '/');
             },
-            // "img/[to]/[name].[ext]",
+            // 'img/[to]/[name].[ext]',
             esModule: false,
           },
         },
@@ -109,18 +109,18 @@ const app = {
     ],
   },
   resolve: {
-    extensions: [".js"],
+    extensions: ['.js'],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "css/style.min.css",
+      filename: 'css/style.min.css',
     }),
     new CopyWebpackPlugin(
       [
         {
-          context: "src/img",
-          from: "**/*",
-          to: path.resolve(DEST_PATH, "img"),
+          context: 'src/img',
+          from: '**/*',
+          to: path.resolve(DEST_PATH, 'img'),
         },
       ],
     ),
@@ -131,7 +131,7 @@ const app = {
 };
 
 // EJSの変換定義を現在存在するファイル分だけ自動的に追加
-for (const [targetName, srcName] of Object.entries(getEntriesList({ejs: "html"}))) {
+for (const [targetName, srcName] of Object.entries(getEntriesList({ejs: 'html'}))) {
   app.plugins.push(new HtmlWebpackPlugin({
     template: srcName,
     filename: targetName,
