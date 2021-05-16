@@ -27,11 +27,26 @@
           </th>
           <td>
             <% for (const [index, item] of list.values.entries()) { %>
-              <%- item.replace(/, /g, ' &nbsp; ') %>
-              <% if (item.includes('|')) { %>
-                <br>
-              <% } else if (index + 1 < list.values.length) { %>
-                &nbsp;
+              <% if (typeof item !== 'object') { %>
+                <span class="mr-2"><%- item %><%- (index + 1 < list.values.length) ? ',' : '' %></span>
+              <% } else { %>
+                <div class="mb-2">
+                  <% if (item.title) { %>
+                    <span><%- item.title.replace(/, /g, ' &nbsp; ' ) %><br></span>
+                  <% } %>
+                  <% if (item.values) { %>
+                  <ul class="ml-4 mb-1 d-inline-flex flex-wrap justify-content-start list-unstyled">
+                    <% for (const value of item.values.values()) { %>
+                      <li class="mr-2"><%- value %></li>
+                    <% } %>
+                  </ul>
+                  <% } %>
+                  <% if (item.badges) { %>
+                    <% for (const badge of item.badges.values()) { %>
+                      <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="<%- badge %>" data-share-badge-host="https://www.credly.com"></div>
+                    <% } %>
+                  <% } %>
+                </div>
               <% } %>
             <% } %>
           </td>

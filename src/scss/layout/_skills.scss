@@ -8,4 +8,12 @@
     margin-bottom: 1rem;
     min-width: 350px;
   }
+
+  ul {
+    li {
+      &:not(:last-child):after {
+        content: ",";
+      }
+    }
+  }
 }
