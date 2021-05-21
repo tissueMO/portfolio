@@ -21,3 +21,7 @@
 ## `public/` 以下を GitHub Pages にデプロイ
 
 `$ yarn run deploy`
+
+## アクセシビリティテスト
+
+`$ yarn run lighthouse --chrome-flags="--no-sandbox --headless" http://127.0.0.1:3000/`
