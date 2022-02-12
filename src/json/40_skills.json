@@ -26,8 +26,8 @@
                 65,
                 95,
                 70,
-                60,
-                50
+                65,
+                55
               ],
               "backgroundColor": "rgba(255, 127, 127, 0.3)",
               "borderColor": "rgb(255, 80, 80)",
@@ -96,8 +96,8 @@
                 0,
                 0,
                 15,
-                70,
-                80
+                80,
+                90
               ],
               "backgroundColor": "rgba(127, 127, 255, 0.3)",
               "borderColor": "rgb(80, 80, 255)",
@@ -198,12 +198,14 @@
           {
             "title": "JavaScript",
             "values": [
-              "Vue.js",
+              "Vue.js/Nuxt.js",
               "Webpack",
               "Gulp",
               "Babel",
               "Sass",
-              "Bootstrap"
+              "Bootstrap",
+              "WebSocket",
+              "Serverless Framework"
             ]
           },
           {
@@ -277,7 +279,8 @@
       {
         "title": "NoSQL データベース",
         "values": [
-          "MongoDB"
+          "MongoDB",
+          "DynamoDB"
         ]
       },
       {
@@ -298,6 +301,8 @@
               "Route53",
               "CloudFront",
               "API Gateway",
+              "DynamoDB",
+              "Cognito",
               "SQS",
               "SNS",
               "Step Functions",

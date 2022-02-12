@@ -54,6 +54,23 @@
     },
 
     {
+      "name": "ベビーカメラ",
+      "tag": "IoT ソリューション",
+      "thumbnail": "baby-cam-thumb.jpg",
+      "images": [
+        "baby-cam-full-1.jpg",
+        "baby-cam-full-2.jpg"
+      ],
+      "lead": "赤ちゃん遠隔監視ソリューション",
+      "description": "ベッドに寝かせた赤ちゃんを遠隔監視するためのソリューションです。<br>映像によるリアルタイム配信に加え、部屋の気温・湿度や赤ちゃんが泣いているかどうかを可視化できます。<br>もちろん市場には多くの既製品が出回っていますが、リアルタイムでのカメラ配信や音声の信号処理に触れてみたいという興味の下であえて車輪の再発明をしたものです。",
+      "attributes": {
+        "製作時期": "2022年",
+        "使用技術": "Docker / Nginx / Node.js<br>Vue.js / Nuxt.js / WebSocket / Bootstrap<br>Bash / systemd / FFmpeg",
+        "作品カテゴリー": "IoT ソリューション",
+        "リポジトリー": "https://github.com/tissueMO/baby-cam"
+      }
+    },
+    {
       "name": "RPG Developer NEXT",
       "tag": "Windows アプリケーション",
       "thumbnail": "rpgdev-next-thumb.jpg",
