@@ -6,7 +6,6 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 
-
 // 本番用の設定追加分
 module.exports = merge(common.app, {
   mode: 'production',

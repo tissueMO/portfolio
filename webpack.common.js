@@ -26,8 +26,8 @@ const getEntriesList = (targetTypes) => {
 
 // JSONに定義した動的コンテンツを読み込む
 const getDynamicContentsJsonFiles = () => {
-  let jsonFiles = [];
-  const filesMatched = globule.find([`**/*.json`], {cwd: `${__dirname}/src/json`});
+  const jsonFiles = [];
+  const filesMatched = globule.find(['**/*.json'], { cwd: `${__dirname}/src/json` });
 
   for (const srcName of filesMatched) {
     jsonFiles.push(`${__dirname}/src/json/${srcName}`);
@@ -36,13 +36,12 @@ const getDynamicContentsJsonFiles = () => {
   return jsonFiles;
 };
 const dynamicContentsJsonFiles = getDynamicContentsJsonFiles();
-let dynamicContents = {};
+const dynamicContents = {};
 for (const jsonFile of dynamicContentsJsonFiles) {
   const jsonText = fs.readFileSync(jsonFile, 'utf-8');
   const json = JSON.parse(jsonText);
   Object.assign(dynamicContents, json);
 }
-
 
 const app = {
   entry: Object.assign(
