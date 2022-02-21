@@ -71,6 +71,23 @@
       }
     },
     {
+      "name": "ON-AIR Hooks",
+      "tag": "Windows アプリケーション",
+      "thumbnail": "onair-hooks-thumb.jpg",
+      "images": [
+        "onair-hooks-full-1.jpg",
+        "onair-hooks-full-2.jpg"
+      ],
+      "lead": "リモート会議向けオートメーションツール",
+      "description": "PCマイク利用時に任意の処理をフックできるユーティリティアプリです。<br>Webミーティング中に近くの人が気付かずにリアルで話しかけてしまったり、他の通話アプリ越しにコールされたり等といった、リモートワークが普及した時代ならではの困り事を解決するべく開発しました。<br>近くにいる人にはON-AIRネオンで、リモート越しにはSlackのステータスアイコンで状態を可視化する等、オープンなWeb APIを駆使することで活用方法が広がります。",
+      "attributes": {
+        "製作時期": "2022年",
+        "使用技術": "MS .NET WinForms C# / Win32",
+        "作品カテゴリー": "Windows アプリケーション",
+        "リポジトリー": "https://github.com/tissueMO/onair-hooks"
+      }
+    },
+    {
       "name": "RPG Developer NEXT",
       "tag": "Windows アプリケーション",
       "thumbnail": "rpgdev-next-thumb.jpg",
