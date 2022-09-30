@@ -198,13 +198,15 @@
           {
             "title": "JavaScript",
             "values": [
-              "Vue.js/Nuxt.js",
+              "Vue/Nuxt",
+              "React/Next",
               "Webpack",
               "Gulp",
               "Babel",
               "Sass",
               "Bootstrap",
               "WebSocket",
+              "NestJS",
               "Serverless Framework"
             ]
           },
